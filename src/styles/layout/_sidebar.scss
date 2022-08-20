@@ -1,0 +1,54 @@
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+
+   @media (min-width: 600px) {
+      flex-direction: row;
+   }
+
+   @media (min-width: 990px) {
+      grid-area: sidebar;
+   }
+}
+
+.followMe {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 20px auto;
+
+   @media (min-width: 600px) {
+      flex-direction: row;
+      margin: 20px 0;
+   }
+
+   &::after {
+      content: "";
+      height: 1px;
+      width: 50px;
+      margin: 10px;
+      background-color: #000;
+
+      @media (min-width: 600px) {
+         margin: 10px 30px;
+      }
+   }
+}
+
+.media-icons {
+   display: flex;
+   justify-content: space-between;
+   width: 135px;
+}
+
+.icon {
+   cursor: pointer;
+   font-size: 20px;
+
+   &:first-child {
+      margin-left: 0;
+   }
+}

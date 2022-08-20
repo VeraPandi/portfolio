@@ -1,0 +1,12 @@
+.cover {
+   background-image: url("../../assets/images/photo.jpg");
+   background-size: cover;
+   background-position: center;
+   height: 75vh;
+   width: 100%;
+   margin-top: 40px;
+
+   @media (min-width: 990px) {
+      grid-area: cover;
+   }
+}

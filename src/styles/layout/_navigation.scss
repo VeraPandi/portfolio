@@ -1,0 +1,30 @@
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   font-size: 20px;
+
+   @media (min-width: 990px) {
+      grid-area: nav;
+   }
+}
+
+.nav-content-left {
+   display: flex;
+   height: 50px;
+   width: 60px;
+   padding: 11px 15px 5px 10px;
+   background-color: #fff;
+}
+
+.nav-content-right {
+   display: flex;
+   align-items: center;
+   height: 50px;
+   padding: 8px 15px;
+   font-size: 40px;
+   background-color: #fff;
+}

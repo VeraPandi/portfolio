@@ -1,0 +1,85 @@
+/*------------------------------*/
+/*---- Document root / body ----*/
+
+html {
+   margin: 10px;
+}
+
+body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+#root {
+   @media (min-width: 990px) {
+      display: grid;
+      grid-template-columns: 85px 1.7fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+         "nav nav"
+         "sidebar main";
+   }
+}
+
+/*----------------------*/
+/*---- Page content ----*/
+
+main {
+   @media (min-width: 990px) {
+      display: grid;
+      grid-template-columns: 50%;
+      grid-template-areas: "intro cover";
+   }
+}
+
+/*----------------------*/
+/*--- Text container ---*/
+
+p {
+   font-family: "Raleway", sans-serif;
+}
+
+span {
+   font-family: "Raleway", sans-serif;
+   font-size: 17px;
+   font-weight: 600;
+}
+
+/*----------------------*/
+/*-------- Text --------*/
+
+h1,
+h2 {
+   margin: 0;
+   font-family: "Marcellus", "DM Sans", sans-serif;
+   font-size: 32px;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+h3,
+h4 {
+   font-family: "Raleway", sans-serif;
+}
+
+/*---------------------*/
+/*--- Button / link ---*/
+
+button {
+   background-color: #fff;
+   border-style: none;
+}
+
+.link {
+   margin: auto 20px auto 0;
+   font-family: "Marcellus", "DM Sans", sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   text-decoration: none;
+   color: #000;
+
+   @media (min-width: 600px) {
+      margin: auto;
+   }
+}

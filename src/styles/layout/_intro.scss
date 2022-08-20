@@ -1,0 +1,70 @@
+.intro {
+   margin: 20px;
+   font-family: "Marcellus";
+
+   p {
+      margin: 50px 0 10px;
+      line-height: 1.5;
+      color: #212529e8;
+   }
+
+   @media (min-width: 990px) {
+      grid-area: intro;
+   }
+}
+
+/*-----------------------*/
+/*-- Buttons container --*/
+
+.view-more {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   height: 120px;
+
+   @media (min-width: 600px) {
+      flex-direction: row;
+   }
+}
+
+.view-more a {
+   width: 140px;
+   padding: 8px 20px;
+   font-family: "Raleway", sans-serif;
+   font-size: 1rem;
+   font-weight: 500;
+   text-align: center;
+   border: 2px solid #000;
+}
+
+/*-----------------------*/
+/*------- Buttons -------*/
+
+.project-link,
+.contact-link {
+   margin: 10px auto;
+   transition: all 0.3s linear;
+   cursor: pointer;
+
+   &:hover {
+      box-shadow: 8px 8px 0px #000, -8px -8px 0px #000;
+   }
+}
+
+.project-link {
+   color: #fff;
+   background-color: #000;
+}
+
+.contact-link {
+   background-image: linear-gradient(to top, #000 50%, #fff 50%),
+      linear-gradient(to top, #000 50%, transparent 50%);
+   background-size: 100% 200%;
+   color: #000;
+
+   &:hover {
+      background-position: bottom;
+      color: #fff;
+   }
+}
