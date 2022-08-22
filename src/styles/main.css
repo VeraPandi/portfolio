@@ -1,6 +1,5 @@
 /*------------------------------*/
 /*---- Document root / body ----*/
-/*------------------------------*/
 html {
   margin: 10px;
 }
@@ -22,7 +21,6 @@ body {
 
 /*----------------------*/
 /*---- Page content ----*/
-/*----------------------*/
 @media (min-width: 990px) {
   main {
     display: grid;
@@ -33,7 +31,6 @@ body {
 
 /*----------------------*/
 /*--- Text container ---*/
-/*----------------------*/
 p {
   font-family: "Raleway", sans-serif;
 }
@@ -46,7 +43,6 @@ span {
 
 /*----------------------*/
 /*-------- Text --------*/
-/*----------------------*/
 h1,
 h2 {
   margin: 0;
@@ -63,7 +59,6 @@ h4 {
 
 /*---------------------*/
 /*--- Button / link ---*/
-/*---------------------*/
 button {
   background-color: #fff;
   border-style: none;
@@ -100,7 +95,6 @@ button {
 
 /*-----------------------*/
 /*-- Buttons container --*/
-/*-----------------------*/
 .view-more {
   display: flex;
   flex-direction: column;
@@ -126,11 +120,10 @@ button {
 
 /*-----------------------*/
 /*------- Buttons -------*/
-/*-----------------------*/
 .project-link,
 .contact-link {
   margin: 10px auto;
-  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.3s linear;
   cursor: pointer;
 }
 .project-link:hover,
@@ -186,7 +179,7 @@ button {
   display: flex;
   height: 50px;
   width: 60px;
-  padding: 5px 15px 5px 10px;
+  padding: 11px 15px 5px 10px;
   background-color: #fff;
 }
 
@@ -194,21 +187,9 @@ button {
   display: flex;
   align-items: center;
   height: 50px;
-  padding: 5px 15px;
+  padding: 8px 15px;
   font-size: 40px;
   background-color: #fff;
-}
-
-.mode-btn {
-  display: flex;
-  align-items: center;
-  margin: 0 20px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.mode-btn-light {
-  font-size: 18px;
 }
 
 .sidebar {
@@ -274,5 +255,58 @@ button {
   height: 40px;
   background-color: #fff;
   cursor: pointer;
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mode-btn-light {
+  font-size: 18px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.container .text {
+  position: relative;
+  font-size: 25px;
+}
+
+.text.sec-text:before {
+  content: "";
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-left: 2px solid #000;
+  -webkit-animation: animate 4000ms steps(30) infinite;
+          animation: animate 4000ms steps(30) infinite;
+}
+
+@-webkit-keyframes animate {
+  40%, 90% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes animate {
+  40%, 90% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

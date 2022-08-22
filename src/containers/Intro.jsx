@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "../components/Link";
+import TypeWriter from "../components/TypeWriter";
 
 const Intro = () => {
    return (
       <section className="intro">
-         <h1>Mon titre</h1>
+         <h1 className="title">Vera Pandi</h1>
+         <TypeWriter />
 
          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl

@@ -2,15 +2,19 @@
    margin: 20px;
    font-family: "Marcellus";
 
-   p {
-      margin: 50px 0 10px;
-      line-height: 1.5;
-      color: #212529e8;
-   }
-
    @media (min-width: 990px) {
       grid-area: intro;
    }
+}
+
+.intro h1 {
+   margin-bottom: 10px;
+}
+
+.intro p {
+   margin: 50px 0 10px;
+   line-height: 1.5;
+   color: #212529e8;
 }
 
 /*-----------------------*/
