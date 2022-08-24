@@ -1,7 +1,6 @@
-/*------------------------------*/
 /*---- Document root / body ----*/
-
 html {
+   height: 100vh;
    margin: 10px;
 }
 
@@ -22,9 +21,7 @@ body {
    }
 }
 
-/*----------------------*/
 /*---- Page content ----*/
-
 main {
    @media (min-width: 990px) {
       display: grid;
@@ -33,9 +30,7 @@ main {
    }
 }
 
-/*----------------------*/
 /*--- Text container ---*/
-
 p {
    font-family: "Raleway", sans-serif;
 }
@@ -46,9 +41,7 @@ span {
    font-weight: 600;
 }
 
-/*----------------------*/
 /*-------- Text --------*/
-
 h1,
 h2 {
    margin: 0;
@@ -63,23 +56,28 @@ h4 {
    font-family: "Raleway", sans-serif;
 }
 
-/*---------------------*/
 /*--- Button / link ---*/
-
 button {
+   font-size: 35px;
    background-color: #fff;
    border-style: none;
 }
 
 .link {
-   margin: auto 20px auto 0;
-   font-family: "Marcellus", "DM Sans", sans-serif;
-   font-size: 20px;
-   font-weight: 600;
+   font-family: "Marcellus";
    text-decoration: none;
    color: #000;
 
    @media (min-width: 600px) {
       margin: auto;
    }
+}
+
+/*------- Theme context -------*/
+html.lightMode {
+   background-color: #fff;
+}
+
+html.darkMode {
+   background-color: #0c0c0c;
 }

@@ -1,11 +1,8 @@
 .nav {
    display: flex;
    justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   top: 0;
-   width: 100%;
-   font-size: 20px;
+   align-items: first baseline;
+   position: relative;
 
    @media (min-width: 990px) {
       grid-area: nav;
@@ -14,17 +11,38 @@
 
 .nav-content-left {
    display: flex;
-   height: 50px;
-   width: 60px;
-   padding: 11px 15px 5px 10px;
+   position: relative;
+   z-index: 2;
+   height: 36px;
+   width: 65px;
+   padding: 0 12px;
    background-color: #fff;
+
+   .link {
+      font-size: 20px;
+      font-weight: 600;
+   }
 }
 
 .nav-content-right {
    display: flex;
    align-items: center;
-   height: 50px;
-   padding: 8px 15px;
+   height: 49px;
+   width: 110px;
+   padding: 0 5px;
    font-size: 40px;
    background-color: #fff;
+}
+
+/*------- Theme context -------*/
+.nav-content-right.darkMode {
+   background-color: #0c0c0c;
+}
+
+.nav-content-left.darkMode {
+   background-color: #0c0c0c;
+
+   .link {
+      color: #fff;
+   }
 }

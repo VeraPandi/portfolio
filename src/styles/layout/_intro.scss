@@ -1,5 +1,5 @@
 .intro {
-   margin: 20px;
+   margin: 30px 20px;
    font-family: "Marcellus";
 
    @media (min-width: 990px) {
@@ -17,9 +17,7 @@
    color: #212529e8;
 }
 
-/*-----------------------*/
 /*-- Buttons container --*/
-
 .view-more {
    display: flex;
    flex-direction: column;
@@ -42,9 +40,7 @@
    border: 2px solid #000;
 }
 
-/*-----------------------*/
 /*------- Buttons -------*/
-
 .project-link,
 .contact-link {
    margin: 10px auto;
@@ -70,5 +66,35 @@
    &:hover {
       background-position: bottom;
       color: #fff;
+   }
+}
+
+/*------- Theme context -------*/
+.intro.darkMode,
+.intro.darkMode p {
+   color: #fff;
+}
+
+.view-more a.darkMode {
+   border: 2px solid #fff;
+}
+
+.project-link.darkMode {
+   color: #000;
+   background-color: #fff;
+
+   &:hover {
+      box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+   }
+}
+
+.contact-link.darkMode {
+   background-image: linear-gradient(to top, #fff 50%, #fff 50%),
+      linear-gradient(to top, #fff 50%, transparent 50%);
+   color: #000;
+
+   &:hover {
+      box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+      color: #000;
    }
 }

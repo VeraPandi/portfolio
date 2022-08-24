@@ -5,7 +5,7 @@ import { usePhrase } from "../hooks/usePhrase";
  * Displays a typewriter
  * @const {string} selectedPhrase - Phrase that should be displayed on the page
  * @const {string} currentPhrase - Phrase currently displayed on the page
- * @return {string} - typewriter
+ * @return {JSX.Element} - typewriter
  */
 
 // Array of phrases to display

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ThemeContextProvider from "./context/ThemeContext";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import About from "./pages/About";
@@ -9,16 +10,18 @@ import "./styles/main.scss";
 
 function App() {
    return (
-      <Router>
-         <Navigation />
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Project" element={<Project />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Contact" element={<Contact />} />
-         </Routes>
-         <Sidebar />
-      </Router>
+      <ThemeContextProvider>
+         <Router>
+            <Navigation />
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/Project" element={<Project />} />
+               <Route path="/About" element={<About />} />
+               <Route path="/Contact" element={<Contact />} />
+            </Routes>
+            <Sidebar />
+         </Router>
+      </ThemeContextProvider>
    );
 }
 

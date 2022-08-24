@@ -1,7 +1,78 @@
 .menu {
-   display: flex;
-   align-items: center;
-   height: 40px;
-   background-color: #fff;
+   display: none;
+
+   &.active {
+      display: flex;
+      position: fixed;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      animation: menu 0.5s ease;
+      background: #fff;
+   }
+}
+
+@keyframes menu {
+   0% {
+      bottom: 100%;
+   }
+   100% {
+      bottom: 0;
+   }
+}
+
+.menu-open-btn {
+   padding-top: 8px;
    cursor: pointer;
+}
+
+.menu-close-btn {
+   display: none;
+   color: #0c0c0c;
+
+   &.active {
+      display: flex;
+      position: absolute;
+      right: 0;
+      padding: 16px 20px;
+      cursor: pointer;
+   }
+}
+
+.menu-content {
+   display: flex;
+   flex-direction: column;
+   margin: 23vh 0;
+
+   .link {
+      margin: 17px;
+      font-size: 34px;
+   }
+}
+
+/*------- Theme context -------*/
+.menu.darkMode {
+   &.active {
+      background: #0c0c0c;
+   }
+}
+
+.menu-open-btn.darkMode {
+   color: #fff;
+   background-color: #0c0c0c;
+}
+
+.menu-close-btn.darkMode {
+   &.active {
+      color: #fff;
+      background: #0c0c0c;
+   }
+}
+
+.home.darkMode,
+.project.darkMode,
+.about.darkMode {
+   color: #fff;
 }
