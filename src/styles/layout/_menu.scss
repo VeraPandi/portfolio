@@ -2,12 +2,12 @@
    display: none;
 
    &.active {
-      display: flex;
       position: fixed;
-      z-index: 1;
+      z-index: 10;
       right: 0;
       bottom: 0;
       left: 0;
+      display: flex;
       height: 100vh;
       animation: menu 0.5s ease;
       background: #fff;
@@ -33,9 +33,9 @@
    color: #0c0c0c;
 
    &.active {
-      display: flex;
       position: absolute;
       right: 0;
+      display: flex;
       padding: 16px 20px;
       cursor: pointer;
    }
@@ -72,7 +72,7 @@
 }
 
 .home.darkMode,
-.project.darkMode,
+.portfolio.darkMode,
 .about.darkMode {
    color: #fff;
 }

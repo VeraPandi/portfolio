@@ -44,9 +44,9 @@ const Menu = () => {
                   onClick={() => setIsOpen(!isOpen)}
                />
                <Link
-                  path="/Project"
-                  className={`link project ${theme}`}
-                  name="Project"
+                  path="/Portfolio"
+                  className={`link portfolio ${theme}`}
+                  name="Portfolio"
                   onClick={() => setIsOpen(!isOpen)}
                />
                <Link

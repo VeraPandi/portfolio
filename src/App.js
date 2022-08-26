@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ThemeContextProvider from "./context/ThemeContext";
 import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
 import Project from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -15,7 +16,8 @@ function App() {
             <Navigation />
             <Routes>
                <Route path="/" element={<Home />} />
-               <Route path="/Project" element={<Project />} />
+               <Route path="/Portfolio" element={<Portfolio />} />
+               <Route path="/Project/:ID" element={<Project />} />
                <Route path="/About" element={<About />} />
                <Route path="/Contact" element={<Contact />} />
             </Routes>

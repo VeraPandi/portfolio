@@ -41,7 +41,7 @@
 }
 
 /*------- Buttons -------*/
-.project-link,
+.portfolio-link,
 .contact-link {
    margin: 10px auto;
    transition: all 0.3s linear;
@@ -52,7 +52,7 @@
    }
 }
 
-.project-link {
+.portfolio-link {
    color: #fff;
    background-color: #000;
 }
@@ -79,7 +79,7 @@
    border: 2px solid #fff;
 }
 
-.project-link.darkMode {
+.portfolio-link.darkMode {
    color: #000;
    background-color: #fff;
 

@@ -1,6 +1,6 @@
-/*------------------------------*/
 /*---- Document root / body ----*/
 html {
+  height: 100vh;
   margin: 10px;
 }
 
@@ -19,7 +19,6 @@ body {
   }
 }
 
-/*----------------------*/
 /*---- Page content ----*/
 @media (min-width: 990px) {
   main {
@@ -29,7 +28,6 @@ body {
   }
 }
 
-/*----------------------*/
 /*--- Text container ---*/
 p {
   font-family: "Raleway", sans-serif;
@@ -41,7 +39,6 @@ span {
   font-weight: 600;
 }
 
-/*----------------------*/
 /*-------- Text --------*/
 h1,
 h2 {
@@ -57,18 +54,15 @@ h4 {
   font-family: "Raleway", sans-serif;
 }
 
-/*---------------------*/
 /*--- Button / link ---*/
 button {
+  font-size: 35px;
   background-color: #fff;
   border-style: none;
 }
 
 .link {
-  margin: auto 20px auto 0;
-  font-family: "Marcellus", "DM Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-family: "Marcellus";
   text-decoration: none;
   color: #000;
 }
@@ -78,14 +72,18 @@ button {
   }
 }
 
-.intro {
-  margin: 20px;
-  font-family: "Marcellus";
+/*------- Theme context -------*/
+html.lightMode {
+  background-color: #fff;
 }
-.intro p {
-  margin: 50px 0 10px;
-  line-height: 1.5;
-  color: rgba(33, 37, 41, 0.9098039216);
+
+html.darkMode {
+  background-color: #0c0c0c;
+}
+
+.intro {
+  margin: 30px 20px;
+  font-family: "Marcellus";
 }
 @media (min-width: 990px) {
   .intro {
@@ -93,7 +91,16 @@ button {
   }
 }
 
-/*-----------------------*/
+.intro h1 {
+  margin-bottom: 10px;
+}
+
+.intro p {
+  margin: 50px 0 10px;
+  line-height: 1.5;
+  color: rgba(33, 37, 41, 0.9098039216);
+}
+
 /*-- Buttons container --*/
 .view-more {
   display: flex;
@@ -118,20 +125,19 @@ button {
   border: 2px solid #000;
 }
 
-/*-----------------------*/
 /*------- Buttons -------*/
-.project-link,
+.portfolio-link,
 .contact-link {
   margin: 10px auto;
   transition: all 0.3s linear;
   cursor: pointer;
 }
-.project-link:hover,
+.portfolio-link:hover,
 .contact-link:hover {
   box-shadow: 8px 8px 0px #000, -8px -8px 0px #000;
 }
 
-.project-link {
+.portfolio-link {
   color: #fff;
   background-color: #000;
 }
@@ -146,13 +152,40 @@ button {
   color: #fff;
 }
 
+/*------- Theme context -------*/
+.intro.darkMode,
+.intro.darkMode p {
+  color: #fff;
+}
+
+.view-more a.darkMode {
+  border: 2px solid #fff;
+}
+
+.portfolio-link.darkMode {
+  color: #000;
+  background-color: #fff;
+}
+.portfolio-link.darkMode:hover {
+  box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+}
+
+.contact-link.darkMode {
+  background-image: linear-gradient(to top, #fff 50%, #fff 50%), linear-gradient(to top, #fff 50%, transparent 50%);
+  color: #000;
+}
+.contact-link.darkMode:hover {
+  box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+  color: #000;
+}
+
 .cover {
   background-image: url("../../assets/images/photo.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 75vh;
   width: 100%;
-  margin-top: 40px;
+  margin-top: -19px;
 }
 @media (min-width: 990px) {
   .cover {
@@ -163,11 +196,8 @@ button {
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  font-size: 20px;
+  align-items: first baseline;
+  position: relative;
 }
 @media (min-width: 990px) {
   .nav {
@@ -177,19 +207,38 @@ button {
 
 .nav-content-left {
   display: flex;
-  height: 50px;
-  width: 60px;
-  padding: 11px 15px 5px 10px;
+  position: relative;
+  z-index: 11;
+  height: 36px;
+  width: 65px;
+  padding: 0 12px;
   background-color: #fff;
+}
+.nav-content-left .link {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .nav-content-right {
   display: flex;
   align-items: center;
-  height: 50px;
-  padding: 8px 15px;
+  height: 49px;
+  width: 110px;
+  padding: 0 5px;
   font-size: 40px;
   background-color: #fff;
+}
+
+/*------- Theme context -------*/
+.nav-content-right.darkMode {
+  background-color: #0c0c0c;
+}
+
+.nav-content-left.darkMode {
+  background-color: #0c0c0c;
+}
+.nav-content-left.darkMode .link {
+  color: #fff;
 }
 
 .sidebar {
@@ -242,71 +291,313 @@ button {
 }
 
 .icon {
-  cursor: pointer;
   font-size: 20px;
+  cursor: pointer;
 }
 .icon:first-child {
   margin-left: 0;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  height: 40px;
+/*------- Theme context -------*/
+.sidebar.darkMode {
+  color: #fff;
+}
+
+.followMe.darkMode::after {
   background-color: #fff;
+}
+
+.menu {
+  display: none;
+}
+.menu.active {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  -webkit-animation: menu 0.5s ease;
+          animation: menu 0.5s ease;
+  background: #fff;
+}
+
+@-webkit-keyframes menu {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes menu {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.menu-open-btn {
+  padding-top: 8px;
   cursor: pointer;
 }
 
+.menu-close-btn {
+  display: none;
+  color: #0c0c0c;
+}
+.menu-close-btn.active {
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  margin: 23vh 0;
+}
+.menu-content .link {
+  margin: 17px;
+  font-size: 34px;
+}
+
+/*------- Theme context -------*/
+.menu.darkMode.active {
+  background: #0c0c0c;
+}
+
+.menu-open-btn.darkMode {
+  color: #fff;
+  background-color: #0c0c0c;
+}
+
+.menu-close-btn.darkMode.active {
+  color: #fff;
+  background: #0c0c0c;
+}
+
+.home.darkMode,
+.portfolio.darkMode,
+.about.darkMode {
+  color: #fff;
+}
+
 .mode-btn {
+  position: relative;
+  z-index: 11;
   display: flex;
   align-items: center;
-  margin: 0 20px;
+  margin: 0 auto 0 12px;
   font-size: 15px;
   cursor: pointer;
 }
 
-.mode-btn-light {
-  font-size: 18px;
-}
-
-.container {
-  overflow: hidden;
-}
-
-.container .text {
+.mode-btn-dark {
   position: relative;
-  font-size: 25px;
+  top: 1px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.text.sec-text:before {
-  content: "";
-  font-size: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.mode-btn-light {
+  position: relative;
+  top: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*------- Theme context -------*/
+.mode-btn-light.darkMode {
+  font-size: 24px;
+  color: #fff;
+  background-color: #0c0c0c;
+}
+
+.typewriter {
+  height: 120px;
+}
+@media (min-width: 336px) {
+  .typewriter {
+    height: 80px;
+  }
+}
+@media (min-width: 480px) {
+  .typewriter {
+    height: auto;
+  }
+}
+
+.typewriter-title-one {
+  font-family: "Marcellus";
+  font-size: 28px;
+}
+@media (min-width: 540px) {
+  .typewriter-title-one {
+    font-size: 30px;
+  }
+}
+
+.typewriter-title-two {
+  display: flex;
+  width: 100%;
+  font-family: "Marcellus";
+  font-size: 28px;
+  line-height: 1.6;
+}
+@media (min-width: 480px) {
+  .typewriter-title-two {
+    display: inline;
+    width: auto;
+  }
+}
+@media (min-width: 540px) {
+  .typewriter-title-two {
+    font-size: 30px;
+  }
+}
+
+.color-JavaScript {
+  color: #fb630a;
+}
+
+.color-React {
+  color: #0093db;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 4px solid #000;
+  position: relative;
+  margin: 8px auto;
+  height: 320px;
   height: 100%;
   width: 100%;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-text {
+  background-color: #979797;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  border: 1px solid #4a4a4a;
+  display: flex;
+  margin: 0;
+  transition: all 0.25s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+}
+.card .card-text:hover {
+  margin: auto;
   background-color: #fff;
-  border-left: 2px solid #000;
-  -webkit-animation: animate 4000ms steps(30) infinite;
-          animation: animate 4000ms steps(30) infinite;
+  opacity: 0.9;
+  transform: scale(0.95);
+  opacity: 0.9;
 }
 
-@-webkit-keyframes animate {
-  40%, 90% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-  }
+.card .card-text a {
+  text-decoration: none;
+  color: #000;
 }
 
-@keyframes animate {
-  40%, 90% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-  }
+.card span {
+  font-size: 16px;
+  background-color: #4a4a4a;
+  opacity: 1;
+  color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8196078431);
+  text-align: center;
+}
+
+.card-btn {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-weight: 200;
+  padding: 4px 8px;
+}
+
+.card-text span {
+  font-size: 14px;
+}
+
+/*------- Theme context -------*/
+.card.darkMode {
+  border: 4px solid #fff;
+}
+
+.card-btn.darkMode {
+  border: none;
+}
+
+.page-main .title {
+  margin: 20px 0;
+}
+
+.underline {
+  border-bottom: 1px solid #000;
+  width: 100%;
+  display: inline-block;
+  margin: 22px 0 37px;
+}
+
+/*------- Theme context -------*/
+.title-text.darkMode {
+  color: #fff;
+}
+
+.underline.darkMode {
+  border-bottom: 1px solid #fff;
 }
 /*# sourceMappingURL=main.css.map */

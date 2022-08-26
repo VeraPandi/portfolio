@@ -24,14 +24,16 @@ const Intro = () => {
 
          <div className={`view-more ${theme}`}>
             <Link
-               path="/Project"
-               className={`link project-link ${theme}`}
+               path="/Portfolio"
+               className={`link portfolio-link ${theme}`}
                name="Mes projets"
+               onClick=""
             />
             <Link
                path="/Contact"
                className={`link contact-link ${theme}`}
                name="Me contacter"
+               onClick=""
             />
          </div>
       </section>

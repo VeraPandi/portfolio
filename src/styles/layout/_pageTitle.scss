@@ -1,0 +1,19 @@
+.page-main .title {
+   margin: 20px 0;
+}
+
+.underline {
+   display: inline-block;
+   width: 100%;
+   margin: 22px 0 37px;
+   border-bottom: 1px solid #000;
+}
+
+/*------- Theme context -------*/
+.title-text.darkMode {
+   color: #fff;
+}
+
+.underline.darkMode {
+   border-bottom: 1px solid #fff;
+}
