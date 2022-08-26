@@ -87,3 +87,17 @@ html.lightMode {
 html.darkMode {
    background-color: #0c0c0c;
 }
+
+///////////////////////////
+
+.picture img,
+.gallery-content .image img {
+   height: 300px;
+   width: 300px;
+}
+
+.gallery-content {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
