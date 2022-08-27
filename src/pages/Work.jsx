@@ -12,7 +12,7 @@ import PageTitle from "../components/PageTitle";
  * @return {object} - Page
  */
 
-const Project = () => {
+const Work = () => {
    const { theme } = useContext(ThemeContext);
 
    const { ID } = useParams();
@@ -55,4 +55,4 @@ const Project = () => {
    );
 };
 
-export default Project;
+export default Work;

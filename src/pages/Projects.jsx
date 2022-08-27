@@ -3,13 +3,13 @@ import { ThemeContext } from "../context/ThemeContext";
 import Card from "../components/Card";
 import PageTitle from "../components/PageTitle";
 
-const Portfolio = () => {
+const Projects = () => {
    const { theme } = useContext(ThemeContext);
 
    return (
       <main className="page-main">
          <PageTitle
-            title="Portfolio"
+            title="Projects"
             text={`title-text ${theme}`}
             underline={`underline ${theme}`}
          />
@@ -18,4 +18,4 @@ const Portfolio = () => {
    );
 };
 
-export default Portfolio;
+export default Projects;

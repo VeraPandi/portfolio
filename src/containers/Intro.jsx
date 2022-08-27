@@ -24,7 +24,7 @@ const Intro = () => {
 
          <div className={`view-more ${theme}`}>
             <Link
-               path="/Portfolio"
+               path="/Projects"
                className={`link portfolio-link ${theme}`}
                name="Mes projets"
                onClick=""

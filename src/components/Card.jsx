@@ -14,7 +14,7 @@ const Card = () => {
                   <img src={element.cover} alt="" />
                   <div className="card-text">
                      <p className="card-tags">{element.techs.join(" / ")}</p>
-                     <Link to={`/Project/${element.id}`}>
+                     <Link to={`/Work/${element.id}`}>
                         <span className={`card-btn ${theme}`}>
                            Voir le projet
                         </span>

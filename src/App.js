@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import ThemeContextProvider from "./context/ThemeContext";
 import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import Project from "./pages/Project";
+import Projects from "./pages/Projects";
+import Work from "./pages/Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -22,8 +22,8 @@ function App() {
             <Navigation />
             <Routes>
                <Route path="/" element={<Home />} />
-               <Route path="/Portfolio" element={<Portfolio />} />
-               <Route path="/Project/:ID" element={<Project />} />
+               <Route path="/Projects" element={<Projects />} />
+               <Route path="/Work/:ID" element={<Work />} />
                <Route path="/About" element={<About />} />
                <Route path="/Contact" element={<Contact />} />
                <Route path="/404" element={<NotFound />} />
