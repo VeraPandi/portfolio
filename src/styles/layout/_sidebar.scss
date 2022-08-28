@@ -11,6 +11,9 @@
 
    @media (min-width: 990px) {
       grid-area: sidebar;
+      position: relative;
+      left: -10px;
+      transform: rotate(-90deg);
    }
 }
 
@@ -25,12 +28,16 @@
       margin: 20px 0;
    }
 
+   @media (min-width: 990px) {
+      min-width: 200px;
+   }
+
    &::after {
       content: "";
       height: 1px;
       width: 50px;
       margin: 10px;
-      background-color: #000;
+      background-color: #0c0c0c;
 
       @media (min-width: 600px) {
          margin: 10px 30px;
@@ -42,6 +49,10 @@
    display: flex;
    justify-content: space-between;
    width: 135px;
+
+   @media (min-width: 990px) {
+      flex-direction: row-reverse;
+   }
 }
 
 .icon {
@@ -50,6 +61,11 @@
 
    &:first-child {
       margin-left: 0;
+   }
+
+   @media (min-width: 990px) {
+      padding: 10px;
+      transform: rotate(90deg);
    }
 }
 

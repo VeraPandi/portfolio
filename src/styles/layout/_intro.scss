@@ -2,19 +2,35 @@
    margin: 30px 20px;
    font-family: "Marcellus";
 
+   @media (min-width: 760px) {
+      width: 700px;
+      margin: 30px auto;
+   }
+
    @media (min-width: 990px) {
       grid-area: intro;
+      width: 100%;
+      margin: auto;
+      padding-left: 18px;
+   }
+
+   @media (min-width: 1740px) {
+      padding-left: 45px;
    }
 }
 
 .intro h1 {
-   margin-bottom: 10px;
+   margin: 20px 0 10px;
 }
 
 .intro p {
    margin: 50px 0 10px;
    line-height: 1.5;
    color: #212529e8;
+
+   @media (min-width: 990px) {
+      padding-right: 35px;
+   }
 }
 
 /*-- Buttons container --*/
@@ -25,19 +41,21 @@
    position: relative;
    height: 120px;
 
-   @media (min-width: 600px) {
+   @media (min-width: 415px) {
       flex-direction: row;
+      justify-content: flex-start;
+      height: 50px;
    }
 }
 
 .view-more a {
-   width: 140px;
+   width: 115px;
    padding: 8px 20px;
    font-family: "Raleway", sans-serif;
    font-size: 1rem;
    font-weight: 500;
    text-align: center;
-   border: 2px solid #000;
+   border: 2px solid #0c0c0c;
 }
 
 /*------- Buttons -------*/
@@ -48,20 +66,24 @@
    cursor: pointer;
 
    &:hover {
-      box-shadow: 8px 8px 0px #000, -8px -8px 0px #000;
+      box-shadow: 8px 8px 0px #0c0c0c, -8px -8px 0px #0c0c0c;
+   }
+
+   @media (min-width: 415px) {
+      margin: 10px 20px 0 0;
    }
 }
 
 .portfolio-link {
    color: #fff;
-   background-color: #000;
+   background-color: #0c0c0c;
 }
 
 .contact-link {
-   background-image: linear-gradient(to top, #000 50%, #fff 50%),
-      linear-gradient(to top, #000 50%, transparent 50%);
+   background-image: linear-gradient(to top, #0c0c0c 50%, #fff 50%),
+      linear-gradient(to top, #0c0c0c 50%, transparent 50%);
    background-size: 100% 200%;
-   color: #000;
+   color: #0c0c0c;
 
    &:hover {
       background-position: bottom;
@@ -80,7 +102,7 @@
 }
 
 .portfolio-link.darkMode {
-   color: #000;
+   color: #0c0c0c;
    background-color: #fff;
 
    &:hover {
@@ -91,10 +113,10 @@
 .contact-link.darkMode {
    background-image: linear-gradient(to top, #fff 50%, #fff 50%),
       linear-gradient(to top, #fff 50%, transparent 50%);
-   color: #000;
+   color: #0c0c0c;
 
    &:hover {
       box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
-      color: #000;
+      color: #0c0c0c;
    }
 }

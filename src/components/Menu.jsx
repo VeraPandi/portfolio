@@ -40,19 +40,19 @@ const Menu = () => {
                <Link
                   path="/"
                   className={`link home ${theme}`}
-                  name="Home"
+                  name="Accueil"
                   onClick={() => setIsOpen(!isOpen)}
                />
                <Link
                   path="/Projects"
                   className={`link portfolio ${theme}`}
-                  name="Portfolio"
+                  name="Projets"
                   onClick={() => setIsOpen(!isOpen)}
                />
                <Link
                   path="/About"
                   className={`link about ${theme}`}
-                  name="About"
+                  name="À propos"
                   onClick={() => setIsOpen(!isOpen)}
                />
             </div>

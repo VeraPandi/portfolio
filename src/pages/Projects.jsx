@@ -9,7 +9,7 @@ const Projects = () => {
    return (
       <main className="page-main">
          <PageTitle
-            title="Projects"
+            title="Projets"
             text={`title-text ${theme}`}
             underline={`underline ${theme}`}
          />

@@ -16,7 +16,7 @@ const Navigation = () => {
    return (
       <nav className="nav" data-theme="darkMode">
          <div className={`nav-content-left ${theme}`}>
-            <Link path="/" className="link home" name="HOME" onClick="" />
+            <Link path="/" className="link home" name="ACCUEIL" onClick="" />
          </div>
 
          <div className={`nav-content-right ${theme}`}>

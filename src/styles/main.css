@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.6px;
 }
 
 @media (min-width: 990px) {
@@ -25,6 +26,26 @@ body {
     display: grid;
     grid-template-columns: 50%;
     grid-template-areas: "intro cover";
+    height: 100vh;
+  }
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 510px;
+  margin: 12px;
+}
+@media (min-width: 520px) {
+  .page-main {
+    max-width: 100%;
+    margin: 40px 12px;
+  }
+}
+@media (min-width: 990px) {
+  .page-main {
+    margin: 40px 85px 40px 0;
   }
 }
 
@@ -66,11 +87,6 @@ button {
   text-decoration: none;
   color: #000;
 }
-@media (min-width: 600px) {
-  .link {
-    margin: auto;
-  }
-}
 
 /*------- Theme context -------*/
 html.lightMode {
@@ -85,9 +101,23 @@ html.darkMode {
   margin: 30px 20px;
   font-family: "Marcellus";
 }
+@media (min-width: 760px) {
+  .intro {
+    width: 700px;
+    margin: 30px auto;
+  }
+}
 @media (min-width: 990px) {
   .intro {
     grid-area: intro;
+    width: 100%;
+    margin: auto;
+    padding-left: 18px;
+  }
+}
+@media (min-width: 1740px) {
+  .intro {
+    padding-left: 45px;
   }
 }
 
@@ -100,6 +130,11 @@ html.darkMode {
   line-height: 1.5;
   color: rgba(33, 37, 41, 0.9098039216);
 }
+@media (min-width: 990px) {
+  .intro p {
+    padding-right: 35px;
+  }
+}
 
 /*-- Buttons container --*/
 .view-more {
@@ -109,6 +144,13 @@ html.darkMode {
   position: relative;
   height: 120px;
 }
+@media (min-width: 415px) {
+  .view-more {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 50px;
+  }
+}
 @media (min-width: 600px) {
   .view-more {
     flex-direction: row;
@@ -116,7 +158,7 @@ html.darkMode {
 }
 
 .view-more a {
-  width: 140px;
+  width: 115px;
   padding: 8px 20px;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -135,6 +177,12 @@ html.darkMode {
 .portfolio-link:hover,
 .contact-link:hover {
   box-shadow: 8px 8px 0px #000, -8px -8px 0px #000;
+}
+@media (min-width: 415px) {
+  .portfolio-link,
+.contact-link {
+    margin: 10px 20px 0 0;
+  }
 }
 
 .portfolio-link {
@@ -190,14 +238,15 @@ html.darkMode {
 @media (min-width: 990px) {
   .cover {
     grid-area: cover;
+    height: 100vh;
   }
 }
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: first baseline;
-  position: relative;
 }
 @media (min-width: 990px) {
   .nav {
@@ -206,11 +255,11 @@ html.darkMode {
 }
 
 .nav-content-left {
-  display: flex;
   position: relative;
   z-index: 11;
+  display: flex;
   height: 36px;
-  width: 65px;
+  width: 87px;
   padding: 0 12px;
   background-color: #fff;
 }
@@ -256,6 +305,9 @@ html.darkMode {
 @media (min-width: 990px) {
   .sidebar {
     grid-area: sidebar;
+    position: relative;
+    left: -10px;
+    transform: rotate(-90deg);
   }
 }
 
@@ -283,11 +335,21 @@ html.darkMode {
     margin: 10px 30px;
   }
 }
+@media (min-width: 990px) {
+  .followMe {
+    min-width: 200px;
+  }
+}
 
 .media-icons {
   display: flex;
   justify-content: space-between;
   width: 135px;
+}
+@media (min-width: 990px) {
+  .media-icons {
+    flex-direction: row-reverse;
+  }
 }
 
 .icon {
@@ -296,6 +358,11 @@ html.darkMode {
 }
 .icon:first-child {
   margin-left: 0;
+}
+@media (min-width: 990px) {
+  .icon {
+    padding: 10px;
+  }
 }
 
 /*------- Theme context -------*/
@@ -311,12 +378,12 @@ html.darkMode {
   display: none;
 }
 .menu.active {
-  display: flex;
   position: fixed;
   z-index: 10;
   right: 0;
   bottom: 0;
   left: 0;
+  display: flex;
   height: 100vh;
   -webkit-animation: menu 0.5s ease;
           animation: menu 0.5s ease;
@@ -350,9 +417,9 @@ html.darkMode {
   color: #0c0c0c;
 }
 .menu-close-btn.active {
-  display: flex;
   position: absolute;
   right: 0;
+  display: flex;
   padding: 16px 20px;
   cursor: pointer;
 }
@@ -470,106 +537,133 @@ html.darkMode {
   color: #0093db;
 }
 
-.page-main {
-  display: flex;
-  flex-direction: column;
-  margin: 12px;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
+@media (min-width: 760px) {
+  .cards {
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+@media (min-width: 990px) {
+  .cards {
+    margin-bottom: 40px;
+  }
+}
 
 .card {
-  border: 4px solid #000;
   position: relative;
-  margin: 8px auto;
-  height: 320px;
-  height: 100%;
   width: 100%;
+  margin: 15px auto;
+  background-color: #fff;
+  padding: 9px;
+  border: 4px solid #ccc;
 }
 .card::before {
   content: "";
   position: absolute;
   z-index: 1;
-  width: 100%;
   height: 100%;
+  width: 100%;
+}
+@media (min-width: 520px) {
+  .card {
+    margin: 20px 12px;
+  }
+}
+@media (min-width: 1100px) {
+  .card {
+    width: 44%;
+    margin: 30px 12px;
+  }
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 457px) {
+  .card img {
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
 .card .card-text {
-  background-color: #979797;
   position: absolute;
   z-index: 2;
   top: 0;
-  opacity: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  margin: 20px;
-  border: 1px solid #4a4a4a;
-  display: flex;
-  margin: 0;
-  transition: all 0.25s linear;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
-  color: #000;
   padding: 10px;
+  transition: all 0.25s linear;
+  font-size: 19px;
   text-decoration: none;
+  color: #000;
+  opacity: 0;
+  background-color: #4f4f4f;
 }
 .card .card-text:hover {
   margin: auto;
-  background-color: #fff;
-  opacity: 0.9;
-  transform: scale(0.95);
-  opacity: 0.9;
+  transform: scale(0.98, 0.96);
+  opacity: 1;
+  background-color: #4f4f4f;
 }
 
 .card .card-text a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
 }
 
 .card span {
   font-size: 16px;
-  background-color: #4a4a4a;
-  opacity: 1;
   color: #fff;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
+  border: 1px solid #fff;
 }
 
 .card-tags {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+  padding: 0;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.8196078431);
   text-align: center;
+  list-style: none;
+  color: #fff;
+  line-height: 1.5;
+}
+@media (min-width: 520px) {
+  .card-tags {
+    font-size: 17px;
+  }
 }
 
 .card-btn {
-  padding: 5px 10px;
-  border: 1px solid #000;
-  background-color: #fff;
-  font-weight: 200;
   padding: 4px 8px;
+  font-weight: 200;
+  border: 1px solid #000;
+  background-color: #000;
 }
 
 .card-text span {
   font-size: 14px;
+}
+@media (min-width: 520px) {
+  .card-text span {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 
 /*------- Theme context -------*/
@@ -577,19 +671,40 @@ html.darkMode {
   border: 4px solid #fff;
 }
 
-.card-btn.darkMode {
-  border: none;
+.card.lightMode {
+  border: 4px solid #4f4f4f;
+}
+
+.card-btn.lightMode {
+  background-color: #fff;
+}
+
+.card span.lightMode {
+  color: #000;
+  border: 1px solid #000;
+  font-weight: 600;
 }
 
 .page-main .title {
   margin: 20px 0;
 }
+@media (min-width: 520px) {
+  .page-main .title {
+    margin: 20px 12px;
+  }
+}
+
+@media (min-width: 520px) {
+  .title-text {
+    font-size: 3.5rem;
+  }
+}
 
 .underline {
-  border-bottom: 1px solid #000;
-  width: 100%;
   display: inline-block;
+  width: 100%;
   margin: 22px 0 37px;
+  border-bottom: 1px solid #000;
 }
 
 /*------- Theme context -------*/
@@ -599,5 +714,17 @@ html.darkMode {
 
 .underline.darkMode {
   border-bottom: 1px solid #fff;
+}
+
+.picture img,
+.gallery-content .image img {
+  height: 300px;
+  width: 300px;
+}
+
+.gallery-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 /*# sourceMappingURL=main.css.map */

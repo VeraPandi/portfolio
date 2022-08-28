@@ -8,6 +8,7 @@ body {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   letter-spacing: 0.6px;
 }
 
 #root {
@@ -27,22 +28,38 @@ main {
       display: grid;
       grid-template-columns: 50%;
       grid-template-areas: "intro cover";
+      height: 100vh;
    }
 }
 
 .page-main {
    display: flex;
    flex-direction: column;
+   height: 100%;
+   max-width: 510px;
    margin: 12px;
+
+   @media (min-width: 520px) {
+      max-width: 100%;
+      margin: 40px 12px 12px;
+   }
+
+   @media (min-width: 990px) {
+      margin: 40px 85px 40px 0;
+   }
+}
+
+.page-main h1 {
+   margin-top: 40px;
 }
 
 /*--- Text container ---*/
-p {
+p,
+span {
    font-family: "Raleway", sans-serif;
 }
 
 span {
-   font-family: "Raleway", sans-serif;
    font-size: 17px;
    font-weight: 600;
 }
@@ -72,11 +89,7 @@ button {
 .link {
    font-family: "Marcellus";
    text-decoration: none;
-   color: #000;
-
-   @media (min-width: 600px) {
-      margin: auto;
-   }
+   color: #0c0c0c;
 }
 
 /*------- Theme context -------*/
@@ -86,18 +99,4 @@ html.lightMode {
 
 html.darkMode {
    background-color: #0c0c0c;
-}
-
-///////////////////////////
-
-.picture img,
-.gallery-content .image img {
-   height: 300px;
-   width: 300px;
-}
-
-.gallery-content {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
 }

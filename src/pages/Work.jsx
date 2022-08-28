@@ -17,12 +17,12 @@ const Work = () => {
 
    const { ID } = useParams();
    const work = worksList.find((element) => element.id === ID);
-   console.log(work.gallery.map((image) => image));
+   //    console.log(work.gallery.map((image) => image));
 
    return (
       <main className="page-main">
          <PageTitle
-            title="Projets"
+            title="Projet"
             text={`title-text ${theme}`}
             underline={`underline ${theme}`}
          />
@@ -30,6 +30,7 @@ const Work = () => {
          <article>
             <div className="picture">
                <img src={work.cover} alt="" />
+               {/* <img src="/images/Work1.jpg" alt="" /> */}
                {/* "/images/photo.png" */}
             </div>
             <h2 className="Projet-title">{work.title}</h2>
