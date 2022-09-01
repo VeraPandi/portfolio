@@ -1,10 +1,43 @@
-.gallery-content .image img {
-   height: 300px;
-   width: 300px;
+.gallery {
+   max-width: 100%;
+   margin: 20px 0;
+   overflow-y: hidden;
+   overflow-x: scroll;
+
+   @media (max-width: 750px) {
+      display: none;
+   }
+}
+
+.gallery h2 {
+   width: 100%;
+   margin: 30px 0;
+   font-size: 32px;
 }
 
 .gallery-content {
    display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
+   height: 300px;
+   margin: 20px auto;
+}
+
+.gallery-content .row-images {
+   display: flex;
+   width: 120%;
+}
+
+.gallery-content .row-images img {
+   display: flex;
+   margin: 0 20px;
+   border: 1px solid #dee2e6;
+
+   &:first-child {
+      margin-left: 0;
+   }
+}
+
+/*------- Theme context -------*/
+
+.gallery-title.darkMode {
+   color: #fff;
 }

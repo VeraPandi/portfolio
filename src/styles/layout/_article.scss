@@ -1,4 +1,101 @@
-.picture img {
-   height: 300px;
-   width: 300px;
+@use "../abstracts" as *;
+
+.page-main.project {
+   max-width: 100%;
+   overflow: hidden;
+}
+
+article {
+   font-size: 14px;
+}
+article span {
+   font-size: 16px;
+   line-height: 1.5;
+}
+
+.project-title {
+   font-size: 25px;
+}
+
+.project-picture {
+   margin: 20px 0;
+}
+
+.project-picture img {
+   width: 100%;
+   margin: 15px auto;
+   border: 1px solid #dee2e6;
+
+   @media (min-width: 990px) {
+      width: 666px;
+   }
+}
+
+.project-infos {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: baseline;
+}
+
+.completion {
+   position: relative;
+   margin: 5px 0;
+}
+
+.completion-time-number {
+   position: relative;
+   top: -2px;
+   margin-left: 7px;
+   font-weight: normal;
+}
+
+.completion-time-text {
+   font-weight: normal;
+}
+
+.context {
+   margin: 5px 0;
+}
+
+.context-type {
+   margin: 0 5px 0 7px;
+   font-weight: normal;
+}
+
+.description {
+   margin: 30px auto 15px;
+   text-align: justify;
+   line-height: 1.4;
+}
+
+article .view-more {
+   justify-content: center;
+   margin-top: 50px;
+}
+
+article .view-more a {
+   margin: 10px;
+}
+
+.demo-link,
+.github-link {
+   color: #fff;
+   background-color: #0c0c0c;
+
+   @include linkContainer;
+   @include linkDarkShadowTransition;
+}
+
+/*------- Theme context -------*/
+.project-title.darkMode,
+.project-infos.darkMode,
+.description.darkMode,
+.techs-tags.darkMode {
+   color: #fff;
+}
+
+.demo-link.darkMode,
+.github-link.darkMode {
+   @include linkLightLinearGradient;
 }

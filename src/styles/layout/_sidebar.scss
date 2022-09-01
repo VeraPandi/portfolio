@@ -3,6 +3,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   margin-top: 30px;
    margin-bottom: 30px;
 
    @media (min-width: 600px) {
@@ -10,9 +11,9 @@
    }
 
    @media (min-width: 990px) {
-      grid-area: sidebar;
       position: relative;
       left: -10px;
+      grid-area: sidebar;
       transform: rotate(-90deg);
    }
 }

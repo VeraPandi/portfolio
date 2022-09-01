@@ -36,11 +36,9 @@ main {
    display: flex;
    flex-direction: column;
    height: 100%;
-   max-width: 510px;
    margin: 12px;
 
    @media (min-width: 520px) {
-      max-width: 100%;
       margin: 40px 12px 12px;
    }
 
@@ -86,7 +84,8 @@ button {
    border-style: none;
 }
 
-.link {
+.link,
+a {
    font-family: "Marcellus";
    text-decoration: none;
    color: #0c0c0c;

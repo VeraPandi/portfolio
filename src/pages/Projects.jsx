@@ -12,6 +12,7 @@ const Projects = () => {
             title="Projets"
             text={`title-text ${theme}`}
             underline={`underline ${theme}`}
+            labelText="Liste des projets"
          />
          <Card />
       </main>

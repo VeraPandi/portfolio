@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .intro {
    margin: 30px 20px;
    font-family: "Marcellus";
@@ -35,11 +37,12 @@
 
 /*-- Buttons container --*/
 .view-more {
+   position: relative;
    display: flex;
    flex-direction: column;
    align-items: center;
-   position: relative;
-   height: 120px;
+   max-height: 120px;
+   margin-top: 40px;
 
    @media (min-width: 415px) {
       flex-direction: row;
@@ -49,25 +52,13 @@
 }
 
 .view-more a {
-   width: 115px;
-   padding: 8px 20px;
-   font-family: "Raleway", sans-serif;
-   font-size: 1rem;
-   font-weight: 500;
-   text-align: center;
-   border: 2px solid #0c0c0c;
+   @include linkContainer;
 }
 
-/*------- Buttons -------*/
+/*------- Links -------*/
 .portfolio-link,
 .contact-link {
-   margin: 10px auto;
-   transition: all 0.3s linear;
-   cursor: pointer;
-
-   &:hover {
-      box-shadow: 8px 8px 0px #0c0c0c, -8px -8px 0px #0c0c0c;
-   }
+   @include linkDarkShadowTransition;
 
    @media (min-width: 415px) {
       margin: 10px 20px 0 0;
@@ -80,15 +71,7 @@
 }
 
 .contact-link {
-   background-image: linear-gradient(to top, #0c0c0c 50%, #fff 50%),
-      linear-gradient(to top, #0c0c0c 50%, transparent 50%);
-   background-size: 100% 200%;
-   color: #0c0c0c;
-
-   &:hover {
-      background-position: bottom;
-      color: #fff;
-   }
+   @include linkDarkLinearGradient;
 }
 
 /*------- Theme context -------*/
@@ -102,21 +85,9 @@
 }
 
 .portfolio-link.darkMode {
-   color: #0c0c0c;
-   background-color: #fff;
-
-   &:hover {
-      box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
-   }
+   @include linkLightShadowTransition;
 }
 
 .contact-link.darkMode {
-   background-image: linear-gradient(to top, #fff 50%, #fff 50%),
-      linear-gradient(to top, #fff 50%, transparent 50%);
-   color: #0c0c0c;
-
-   &:hover {
-      box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
-      color: #0c0c0c;
-   }
+   @include linkLightLinearGradient;
 }
