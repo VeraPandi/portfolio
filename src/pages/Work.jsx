@@ -4,6 +4,8 @@ import { ThemeContext } from "../context/ThemeContext";
 import { worksList } from "../datas/works";
 import PageTitle from "../components/PageTitle";
 import Gallery from "../components/Gallery";
+import PrevNextNavigation from "../components/PrevNextNavigation";
+
 /**
  * Displays a page for each project
  * @const {string} theme - Initial mode name
@@ -87,6 +89,8 @@ const Work = () => {
                   </a>
                )}
             </div>
+
+            <PrevNextNavigation ID={ID} array={worksList} theme={theme} />
          </article>
       </main>
    );
