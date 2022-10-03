@@ -1,13 +1,16 @@
 @use "./base/global";
 
+@use "./components/pageTitle";
+
 @use "./layout/intro";
 @use "./layout/cover";
+@use "./layout/header";
+@use "./layout/footer";
 @use "./layout/navigation";
-@use "./layout/sidebar";
-@use "./layout/menu";
 @use "./layout/mode";
 @use "./layout/typeWriter";
 @use "./layout/card";
-@use "./layout/pageTitle";
-@use "./layout/article";
-@use "./layout/gallery";
+@use "./layout/tag";
+
+@use "./pages/projects";
+@use "./pages/notFound";

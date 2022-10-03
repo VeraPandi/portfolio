@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import Card from "../components/Card";
+import { worksList } from "../datas/works";
 import PageTitle from "../components/PageTitle";
+import Card from "../containers/Card";
 
 const Projects = () => {
    const { theme } = useContext(ThemeContext);
 
    return (
-      <main className="page-main">
+      <main className="projects-page main">
          <PageTitle
             title="Projets"
             text={`title-text ${theme}`}
-            underline={`underline ${theme}`}
             labelText="Liste des projets"
          />
-         <Card />
+         <Card array={worksList} />
       </main>
    );
 };

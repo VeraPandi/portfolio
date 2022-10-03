@@ -1,9 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Link = ({ path, className, name, onClick }) => {
+const Link = ({ path, className, name }) => {
    return (
-      <NavLink to={path} className={className} onClick={onClick}>
+      <NavLink to={path} className={className}>
          {name}
       </NavLink>
    );

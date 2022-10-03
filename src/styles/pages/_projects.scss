@@ -1,0 +1,20 @@
+.projects-page .cards {
+   padding-bottom: 60px;
+   @media (min-width: 798px) {
+      margin: 0 5%;
+   }
+}
+
+.projects-page .cards .card {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 20px 0;
+
+   &:first-child {
+      padding-top: 0;
+   }
+
+   @media (min-width: 798px) {
+      padding: 30px 0;
+   }
+}

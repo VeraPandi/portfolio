@@ -1,42 +1,22 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import Link from "../components/Link";
-import TypeWriter from "../components/TypeWriter";
-
-/**
- * Displays an information block
- * @const {string} theme - Current mode name
- * @return {JSX.Element} - information block
- */
+import TypeWriter from "../containers/TypeWriter";
 
 const Intro = () => {
-   const { theme } = useContext(ThemeContext);
-
    return (
-      <section className={`intro ${theme}`}>
-         <h1 className="title">Vera Pandi</h1>
+      <div className="intro">
+         <h1 className="intro-title">Vera Pandi</h1>
          <TypeWriter />
 
          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl
-            euismod urna bibendum
+            Sensible au Responsive Design, UI/UX Design, au beau et au bien
+            fait.
          </p>
 
-         <div className={`view-more ${theme}`}>
-            <Link
-               path="/Projects"
-               className={`link portfolio-link ${theme}`}
-               name="Mes projets"
-               onClick=""
-            />
-            <Link
-               path="/Contact"
-               className={`link contact-link ${theme}`}
-               name="Me contacter"
-               onClick=""
-            />
-         </div>
-      </section>
+         <p>
+            J'aime créer des applications fidèles aux attentes, intégrées avec
+            soin, bien écrites, documentées, testées de bout en bout et
+            agréables à maintenir.
+         </p>
+      </div>
    );
 };
 

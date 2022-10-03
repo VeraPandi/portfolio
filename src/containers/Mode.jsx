@@ -22,7 +22,7 @@ const Mode = () => {
          )}
 
          {theme === "lightMode" && (
-            <button className="mode-btn-dark darkMode" onClick={toggleTheme}>
+            <button className={`mode-btn-dark ${theme}`} onClick={toggleTheme}>
                <FaMoon />
             </button>
          )}

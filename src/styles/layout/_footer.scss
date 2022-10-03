@@ -1,0 +1,38 @@
+.footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: #0f0f0f;
+}
+
+.footer .github-link {
+   margin: 0;
+   padding: 0;
+}
+
+.followMe {
+   padding: 10px;
+   font-size: 15px;
+   text-transform: uppercase;
+   color: #dadada;
+
+   @media (min-width: 798px) {
+      font-size: 16px;
+   }
+}
+
+.media-icons {
+   padding: 10px;
+}
+
+.media-icons a {
+   color: #dadada;
+}
+
+.icon {
+   margin: 0 10px;
+   font-size: 20px;
+   cursor: pointer;
+}

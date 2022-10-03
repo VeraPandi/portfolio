@@ -1,15 +1,14 @@
-import React from "react";
 import { usePhrase } from "../hooks/usePhrase";
-
-/**
- * Displays a typewriter
- * @const {string} selectedPhrase - Phrase that should be displayed on the page
- * @const {string} currentPhrase - Phrase currently displayed on the page
- * @return {JSX.Element} - typewriter
- */
 
 // Array of phrases to display
 const phrases = ["JavaScript", "React"];
+
+/**
+ * Displays a typewriter
+ * @const {string} currentPhrase - Characters currently displayed on the page
+ * @const {string} selectedPhrase - Phrase that should be displayed on the page
+ * @return {JSX.Element} - typewriter
+ */
 
 const TypeWriter = () => {
    const { currentPhrase, selectedPhrase } = usePhrase(phrases);

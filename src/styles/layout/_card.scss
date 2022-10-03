@@ -1,153 +1,127 @@
 .cards {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   margin-bottom: 20px;
-
-   @media (min-width: 760px) {
-      justify-content: space-around;
-      height: 100%;
+   @media (min-width: 698px) {
+      margin: 0 5%;
    }
 
-   @media (min-width: 990px) {
-      margin-bottom: 40px;
-   }
-
-   @media (min-width: 1715px) {
-      max-width: 1521px;
-      margin: auto;
+   @media (min-width: 1400px) {
+      margin: 0 10%;
    }
 }
 
-.card {
-   position: relative;
-   margin: 30px 0;
-   padding: 9px;
-   background-color: #000;
-   border: 4px solid #ccc;
-
-   &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      height: 100%;
-   }
-
-   @media (min-width: 520px) {
-      margin: 25px 0;
-   }
-
-   @media (min-width: 790px) {
-      height: 200px;
-      margin: 20px auto;
-   }
-
-   @media (min-width: 1100px) {
-      margin: 20px 15px;
-   }
-}
-
-.card img {
-   height: 100%;
-   max-width: 450px;
-   width: 100%;
-
-   @media (min-width: 457px) {
+.card-content {
+   @media (min-width: 698px) {
       display: flex;
-      margin: 0 auto;
-   }
-
-   @media (min-width: 1100px) {
-      max-width: 420px;
    }
 }
 
-.card .card-text {
-   position: absolute;
-   z-index: 2;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
+/* ----- Left content ----- */
+.card-content-left {
+   @media (min-width: 698px) {
+      min-width: 35%;
+   }
+}
+
+.card-cover {
+   display: none;
+   //    background-color: #999999ab;
+   background-color: #b7b7b7ab;
+
+   @media (min-width: 698px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px 0 0 10px;
+   }
+}
+
+.card-cover img {
+   filter: saturate(0);
+
+   @media (min-width: 698px) {
+      max-height: 150px;
+      margin: 3px;
+   }
+}
+
+.image-desktop,
+.image-mobile {
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 10px;
-   transition: all 0.3s linear;
-   font-size: 19px;
-   text-decoration: none;
-   color: #0c0c0c;
-   opacity: 0;
+   width: max-content;
+   transform: rotate(-46deg);
+}
 
-   &:hover {
-      margin: auto;
-      transform: scale(0.98, 0.96);
-      background-color: #0c0c0c;
-      opacity: 1;
+/* ----- Right content ----- */
+.card-content-right {
+   padding: 35px 20px 30px;
+   text-align: center;
+   background-color: #2b2b2b;
+   border-radius: 10px;
+
+   @media (min-width: 375px) {
+      text-align: inherit;
+   }
+
+   @media (min-width: 698px) {
+      min-width: 55%;
+      border-radius: 0 10px 10px 0;
    }
 }
 
-.card .card-text a {
-   color: #0c0c0c;
-   text-decoration: none;
-}
+.card-title {
+   margin-bottom: 5px;
+   font-size: 28px;
+   color: #f7f7f7;
 
-.card span {
-   font-size: 16px;
-   color: #fff;
-   border: 1px solid #fff;
+   @media (min-width: 698px) {
+      font-size: 32px;
+   }
 }
 
 .card-tags {
+   font-size: 14px;
+   color: #f7f7f7;
+
+   @media (min-width: 698px) {
+      font-size: 15px;
+   }
+}
+
+.card-intro {
+   margin: 30px 0;
+   color: #9f9f9f;
+
+   @media (min-width: 698px) {
+      margin: 35px 0;
+   }
+}
+
+.card-context {
+   font-size: 16px;
+   color: #9f9f9f;
+}
+
+/* ----- Links ----- */
+.view-more {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   margin: 0 0 15px 0;
-   padding: 0;
-   font-size: 14px;
-   font-weight: 600;
-   text-align: center;
-   list-style: none;
-   color: #fff;
-   line-height: 1.5;
+   margin-top: 30px;
 
-   @media (min-width: 520px) {
-      font-size: 17px;
+   @media (min-width: 375px) {
+      justify-content: flex-end;
    }
 }
 
-.card-btn {
-   padding: 4px 8px;
-   font-weight: 200;
-   border: 1px solid #0c0c0c;
-   background-color: #0c0c0c;
-}
-
-.card-text span {
-   font-size: 14px;
-
-   @media (min-width: 520px) {
-      font-size: 16px;
-      font-weight: 500;
-   }
-}
-
-/*------- Theme context -------*/
-.card.darkMode {
-   border: 4px solid #fff;
-}
-
-.card.lightMode {
-   border: 4px solid #4f4f4f;
-}
-
-.card-btn.lightMode {
-   background-color: #fff;
-}
-
-.card span.lightMode {
-   font-weight: 600;
-   color: #0c0c0c;
-   border: 1px solid #0c0c0c;
+.demo-link,
+.github-link {
+   margin: 10px;
+   padding: 6px 10px;
+   font-size: 18px;
+   text-transform: inherit;
+   text-decoration: underline;
+   color: #f7f7f7;
 }

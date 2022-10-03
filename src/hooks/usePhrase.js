@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
  * Get the current phrase displayed in a typewriter
  * @param {array} phrases - Array of phrases to display
  * @param {string} selectedPhrase - Phrase that should be displayed on the page
- * @const {string} currentPhrase - Phrase currently displayed on the page
+ * @const {string} currentPhrase - Characters currently displayed on the page
  * @const {string} nextRemaining - Next phrase remaining
  * @const {string} nextPhrase - Next phrase
  * @const {number} index - Current phrase index
@@ -33,16 +33,20 @@ export const usePhrase = (phrases) => {
 
    useEffect(() => {
       switch (step) {
+         // -------- Sets phrase display -------- //
          case stepTypes.writing: {
+            // We define the next phrase to display
             const nextPhrase = phrases[index].slice(
                0,
                currentPhrase.length + 1
             );
 
+            // Then, when all the characters of the phrase are displayed on the page, we define a pause
             if (nextPhrase === currentPhrase) {
                setStep(stepTypes.pausing);
             }
 
+            // Here, we define the writing speed of the phrase to display
             const timeout = setTimeout(() => {
                setCurrentPhrase(nextPhrase);
             }, WRITING_INTERVAL);
@@ -50,21 +54,29 @@ export const usePhrase = (phrases) => {
             return () => clearTimeout(timeout);
          }
 
+         // -------- Sets sentence deletion -------- //
          case stepTypes.deleting: {
+            // If the phrase is not being written
             if (!currentPhrase) {
                const timeout = setTimeout(() => {
+                  // We define the index of the next phrase to display
                   const nextIndex = index + 1;
+
+                  // Then, we replace the phrase index and change the type of phrase processing step
                   setIndex(phrases[nextIndex] ? nextIndex : 0);
                   setStep(stepTypes.writing);
                }, DELETING_PAUSE);
+
                return () => clearTimeout(timeout);
             }
 
+            // Here, we define the remaining characters of the displayed phrase
             const nextRemaining = phrases[index].slice(
                0,
                currentPhrase.length - 1
             );
 
+            // Here, we define the character deletion speed
             const timeout = setTimeout(() => {
                setCurrentPhrase(nextRemaining);
             }, DELETING_INTERVAL);
@@ -72,6 +84,7 @@ export const usePhrase = (phrases) => {
             return () => clearTimeout(timeout);
          }
 
+         // -------- Defines the pause time before deleting the phrase -------- //
          case stepTypes.pausing:
          default:
             const timeout = setTimeout(() => {

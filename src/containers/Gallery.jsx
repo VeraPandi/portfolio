@@ -1,4 +1,5 @@
 import React from "react";
+import { worksList } from "../datas/works";
 
 /**
  * Displays a gallery
@@ -8,12 +9,22 @@ import React from "react";
  * @return {JSX.Element} - Gallery
  */
 
-const Gallery = ({ object, theme }) => {
-   const arrayImages = object.gallery.map((element) => element);
+// const Gallery = ({ object, theme }) => {
+const Gallery = () => {
+   //    const arrayImages = object.gallery.map((element) => element);
+   //    console.log(worksList);
+
+   const arrayImages = worksList.map((element) => element.gallery);
+
+   //    if (arrayImages) {
+   //       console.log(arrayImages);
+   //    }
+
+   //    const gal = arrayImages.map((element) => element.gallery);
 
    return (
-      <section className="gallery" aria-label={object.title} tabIndex={0}>
-         <h2 className={`gallery-title ${theme}`}>Galerie</h2>
+      <section className="gallery" tabIndex={0}>
+         {/* <h2 className={`gallery-title ${theme}`}>Galerie</h2>
          <div className="gallery-content">
             {arrayImages.map((element, index) => (
                <div className="row-images" key={`${element}-${index}`}>
@@ -22,7 +33,7 @@ const Gallery = ({ object, theme }) => {
                   ))}
                </div>
             ))}
-         </div>
+         </div> */}
       </section>
    );
 };

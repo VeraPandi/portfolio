@@ -1,13 +1,27 @@
+.main-top {
+   background-color: #fff;
+}
+
+.cover-wrapper {
+   padding-top: 35px;
+   background-color: #000;
+   opacity: 0.94;
+
+   @media (min-width: 1100px) {
+      width: 50%;
+   }
+}
+
 .cover {
    background-image: url("../../assets/images/photo.jpg");
    background-position: center;
    background-size: cover;
-   height: 75vh;
-   width: 100%;
-   margin-top: -19px;
+   height: 450px;
+}
 
-   @media (min-width: 990px) {
-      grid-area: cover;
-      height: 100vh;
-   }
+/*------- Theme context -------*/
+
+.cover-wrapper.darkMode {
+   background-color: #000;
+   opacity: 0.94;
 }

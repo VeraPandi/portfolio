@@ -9,7 +9,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext(null);
 
 const ThemeContextProvider = (props) => {
-   const [theme, setTheme] = useState("darkMode");
+   const [theme, setTheme] = useState("lightMode");
 
    const toggleTheme = () => {
       setTheme(theme === "darkMode" ? "lightMode" : "darkMode");

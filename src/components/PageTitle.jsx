@@ -1,13 +1,10 @@
-import React from "react";
-
-const PageTitle = ({ title, text, underline, labelText }) => {
+const PageTitle = ({ title, text, labelText }) => {
    return (
-      <section className="title">
-         <h1 className={text} aria-label={labelText}>
+      <div className="title">
+         <h3 className={text} aria-label={labelText}>
             {title}
-         </h1>
-         <span className={underline}></span>
-      </section>
+         </h3>
+      </div>
    );
 };
 

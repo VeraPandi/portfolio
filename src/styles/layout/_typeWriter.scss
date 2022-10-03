@@ -1,38 +1,41 @@
 .typewriter {
    height: 120px;
+   margin-bottom: 50px;
 
-   @media (min-width: 336px) {
+   @media (min-width: 323px) {
       height: 80px;
    }
 
-   @media (min-width: 480px) {
+   @media (min-width: 468px) {
       height: auto;
    }
 }
 
 .typewriter-title-one {
-   font-family: "Marcellus";
    font-size: 28px;
 
-   @media (min-width: 540px) {
-      font-size: 30px;
+   @media (min-width: 798px) {
+      font-size: 32px;
    }
 }
 
 .typewriter-title-two {
    display: flex;
+   justify-content: center;
    width: 100%;
-   font-family: "Marcellus";
    font-size: 28px;
    line-height: 1.6;
 
-   @media (min-width: 480px) {
-      display: inline;
-      width: auto;
+   @media (min-width: 375px) {
+      justify-content: flex-start;
    }
 
-   @media (min-width: 540px) {
-      font-size: 30px;
+   @media (min-width: 468px) {
+      display: inline;
+   }
+
+   @media (min-width: 798px) {
+      font-size: 32px;
    }
 }
 

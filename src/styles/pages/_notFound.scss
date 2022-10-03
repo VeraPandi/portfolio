@@ -1,0 +1,45 @@
+.notFound {
+   position: relative;
+   width: 100%;
+}
+
+.notFound-main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 100vh;
+   margin: 0;
+   background-color: #f1f1f1;
+}
+
+.notFound-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+.error-code {
+   font-size: 100px;
+   font-weight: 500;
+   color: #0f0f0f;
+}
+
+.error-message {
+   margin: 50px;
+   font-size: 24px;
+   text-align: center;
+   color: #0f0f0f;
+}
+
+/*------- Theme context -------*/
+
+.notFound-main.darkMode {
+   background-color: #0f0f0f;
+}
+
+.error-code.darkMode,
+.error-message.darkMode {
+   color: #dadada;
+}
