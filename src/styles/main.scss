@@ -1,4 +1,5 @@
 @use "./base/global";
+@use "./base/animations";
 
 @use "./components/pageTitle";
 
@@ -12,5 +13,6 @@
 @use "./layout/card";
 @use "./layout/tag";
 
+@use "./pages/home";
 @use "./pages/projects";
 @use "./pages/notFound";

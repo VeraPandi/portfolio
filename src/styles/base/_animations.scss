@@ -1,0 +1,127 @@
+.intro-title,
+.typewriter,
+.intro p {
+   position: relative;
+   left: 0;
+   animation: fade-right 1500ms both;
+   opacity: 1;
+}
+
+.title-text {
+   position: relative;
+   bottom: 0;
+   animation: fade-left 1500ms;
+   opacity: 1;
+}
+
+.link.demo-link,
+.link.github-link {
+   position: relative;
+   overflow: hidden;
+   margin: 16px 20px;
+   padding: 0;
+
+   &:hover {
+      transform: scale(0.98);
+      text-decoration: none;
+
+      &:after {
+         content: "";
+         position: absolute;
+         bottom: -1px;
+         left: 0;
+         display: flex;
+         height: 2px;
+         width: 100%;
+         animation: line 0.7s cubic-bezier(0.55, 0.06, 0.68, 0.19) infinite both;
+         background: linear-gradient(90deg, transparent, #f7f7f7);
+      }
+   }
+}
+
+/* --- Fade right --- */
+@keyframes fade-right {
+   0% {
+      left: -3000px;
+   }
+
+   70%,
+   90% {
+      left: 50px;
+   }
+
+   90%,
+   100% {
+      left: 0;
+   }
+}
+
+/* --- Fade left --- */
+@keyframes fade-left {
+   0% {
+      right: -3000px;
+   }
+
+   70%,
+   90% {
+      right: 50px;
+   }
+
+   90%,
+   100% {
+      right: 0;
+   }
+}
+
+/* --- Fade left2 --- */
+@keyframes fade-left2 {
+   from {
+      right: -3000px;
+   }
+
+   to {
+      right: 0;
+   }
+}
+
+/* --- Fade-bottom --- */
+@keyframes fade-bottom {
+   0% {
+      bottom: -2000px;
+      opacity: 0;
+   }
+
+   98% {
+      opacity: 0.98;
+   }
+
+   100% {
+      bottom: 0;
+      opacity: 1;
+   }
+}
+
+/* --- Underline --- */
+@keyframes line {
+   from {
+      left: -100%;
+   }
+   to {
+      left: 100%;
+   }
+}
+
+/* --- Opacity --- */
+@keyframes opacity {
+   0% {
+      opacity: 0;
+   }
+
+   98% {
+      opacity: 0.98;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}

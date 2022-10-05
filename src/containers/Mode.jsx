@@ -14,9 +14,13 @@ const Mode = () => {
    const { toggleTheme, theme } = useContext(ThemeContext);
 
    return (
-      <div className="mode-btn">
+      <div className="mode-settings-btn" aria-label="Changer le thème visuel">
          {theme === "darkMode" && (
-            <button className={`mode-btn-light ${theme}`} onClick={toggleTheme}>
+            <button
+               className={`mode-btn-light ${theme}`}
+               onClick={toggleTheme}
+               aria-label={theme === "lightMode" ? "Mode jour" : "Mode nuit"}
+            >
                <BsSun />
             </button>
          )}

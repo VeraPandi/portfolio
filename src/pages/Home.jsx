@@ -10,7 +10,7 @@ const Home = () => {
    const { theme } = useContext(ThemeContext);
 
    return (
-      <main className="main">
+      <main className="home-page main">
          <section className="main-top">
             <div className={`cover-wrapper ${theme}`}>
                <div className="cover"></div>

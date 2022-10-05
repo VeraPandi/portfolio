@@ -8,28 +8,34 @@ const Card = ({ array }) => {
    return (
       <div className="cards" tabIndex={0}>
          {array
-            .map((element) => (
-               <article className="card" key={element.id}>
+            .map((element, index) => (
+               <article className="card" key={`card-${element.id}`}>
                   <div className="card-content">
                      {/* ---------- Left content ---------- */}
                      <section className="card-content-left">
                         <div className="card-cover">
                            {element.gallery.map((element) =>
                               element.type === "Desktop" ? (
-                                 <div className="image-desktop" key={element}>
+                                 <div
+                                    className="image-desktop"
+                                    key={`image-desktop-${index}`}
+                                 >
                                     {element.images.map((item) => (
                                        <img
-                                          key={`${item}-img-desktop`}
+                                          key={`image-desktop-${item}`}
                                           src={item}
                                           alt=""
                                        />
                                     ))}
                                  </div>
                               ) : (
-                                 <div className="image-mobile" key={element}>
+                                 <div
+                                    className="image-mobile"
+                                    key={`image-mobile-${index}`}
+                                 >
                                     {element.images.map((item) => (
                                        <img
-                                          key={`${item}-img-mobile`}
+                                          key={`image-mobile-${item}`}
                                           src={item}
                                           alt=""
                                        />

@@ -1,13 +1,17 @@
-.mode-btn {
+.mode-settings-btn {
    padding: 10px;
+
+   @media (min-width: 798px) {
+      padding: 10px 20px;
+   }
 }
 
 .mode-btn-dark {
    position: relative;
    top: 2px;
    padding: 0;
-   font-size: 17px;
    transform: rotate(15deg);
+   font-size: 17px;
    color: #dadada;
    background-color: transparent;
    cursor: pointer;
