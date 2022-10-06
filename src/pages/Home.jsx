@@ -11,7 +11,7 @@ const Home = () => {
 
    return (
       <main className="home-page main">
-         <section className="main-top">
+         <section className="main-top" aria-label="Information sur l'auteur">
             <div className={`cover-wrapper ${theme}`}>
                <div className="cover"></div>
             </div>
@@ -19,20 +19,12 @@ const Home = () => {
          </section>
 
          <section className="main-center">
-            <PageTitle
-               title="Dernier projet"
-               text={`title-text ${theme}`}
-               labelText="Dernier projet"
-            />
+            <PageTitle title="Dernier projet" text={`title-text ${theme}`} />
             <Card array={worksList.slice(-1)} />
          </section>
 
          <section className="main-bottom">
-            <PageTitle
-               title="Technos"
-               text={`title-text ${theme}`}
-               labelText="Technologies"
-            />
+            <PageTitle title="Technos" text={`title-text ${theme}`} />
             <Tags />
          </section>
       </main>

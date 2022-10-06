@@ -9,11 +9,7 @@ const Projects = () => {
 
    return (
       <main className="projects-page main">
-         <PageTitle
-            title="Projets"
-            text={`title-text ${theme}`}
-            labelText="Liste des projets"
-         />
+         <PageTitle title="Projets" text={`title-text ${theme}`} />
          <Card array={worksList} />
       </main>
    );

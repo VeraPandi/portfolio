@@ -10,7 +10,7 @@ const NotFound = () => {
             <div className="notFound-content">
                <span className={`error-code ${theme}`}>404</span>
                <h1 className={`error-message ${theme}`}>
-                  Whoops ! The page you are looking could not be found...
+                  Oups ! La page que vous recherchez semble introuvable...
                </h1>
             </div>
          </main>

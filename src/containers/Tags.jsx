@@ -9,7 +9,11 @@ const Tags = () => {
       <div className="tags">
          <ul>
             {skills.map((element, index) => (
-               <li className={`tag ${theme}`} key={`${element}-${index}`}>
+               <li
+                  className={`tag ${theme}`}
+                  key={`${element}-${index}`}
+                  lang="en"
+               >
                   {element}
                </li>
             ))}

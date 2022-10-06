@@ -19,14 +19,18 @@ const Mode = () => {
             <button
                className={`mode-btn-light ${theme}`}
                onClick={toggleTheme}
-               aria-label={theme === "lightMode" ? "Mode jour" : "Mode nuit"}
+               aria-label="Choisir le mode jour"
             >
                <BsSun />
             </button>
          )}
 
          {theme === "lightMode" && (
-            <button className={`mode-btn-dark ${theme}`} onClick={toggleTheme}>
+            <button
+               className={`mode-btn-dark ${theme}`}
+               onClick={toggleTheme}
+               aria-label="Choisir le mode nuit"
+            >
                <FaMoon />
             </button>
          )}

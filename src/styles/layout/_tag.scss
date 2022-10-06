@@ -27,6 +27,7 @@
    margin: 0;
    padding: 0;
    list-style-type: none;
+   line-height: 1.5;
 }
 
 .tags li {
@@ -34,9 +35,15 @@
    font-family: "Bai Jamjuree", sans-serif;
    font-size: 18px;
    font-weight: 500;
-   color: #999;
+   color: #686868;
 
    @media (min-width: 798px) {
       font-size: 19px;
    }
+}
+
+/*------- Theme context -------*/
+
+.tags li.darkMode {
+   color: #9f9f9f;
 }

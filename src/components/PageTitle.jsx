@@ -1,9 +1,7 @@
-const PageTitle = ({ title, text, labelText }) => {
+const PageTitle = ({ title, text }) => {
    return (
       <div className="title">
-         <h3 className={text} aria-label={labelText}>
-            {title}
-         </h3>
+         <h3 className={text}>{title}</h3>
       </div>
    );
 };

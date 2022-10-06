@@ -6,13 +6,20 @@
 
 const Card = ({ array }) => {
    return (
-      <div className="cards" tabIndex={0}>
+      <div className="cards" aria-label="Liste des projets" tabIndex={0}>
          {array
             .map((element, index) => (
-               <article className="card" key={`card-${element.id}`}>
+               <article
+                  className="card"
+                  key={`card-${element.id}`}
+                  aria-label={`Projet ${element.id}`}
+               >
                   <div className="card-content">
                      {/* ---------- Left content ---------- */}
-                     <section className="card-content-left">
+                     <section
+                        className="card-content-left"
+                        aria-label="Images du projet"
+                     >
                         <div className="card-cover">
                            {element.gallery.map((element) =>
                               element.type === "Desktop" ? (
@@ -47,9 +54,16 @@ const Card = ({ array }) => {
                      </section>
 
                      {/* ---------- Right content ---------- */}
-                     <section className="card-content-right">
+                     <section
+                        className="card-content-right"
+                        aria-label="Informations sur le projet"
+                     >
                         <h4 className="card-title">{element.title}</h4>
-                        <span className="card-tags">
+                        <span
+                           className="card-tags"
+                           aria-label="Technologies utilisées"
+                           lang="en"
+                        >
                            {element.techs.join(" / ")}
                         </span>
 
@@ -66,11 +80,12 @@ const Card = ({ array }) => {
                         )}
 
                         {/* ---------- Links ---------- */}
-                        <div className="view-more">
+                        <div className="view-more" aria-label="Voir le projet">
                            {element.urlDemo !== undefined && (
                               <a
                                  href={element.urlDemo}
                                  className="link demo-link"
+                                 aria-label="Site web"
                                  target="blank"
                                  rel="noreferrer"
                               >
@@ -81,7 +96,9 @@ const Card = ({ array }) => {
                               <a
                                  href={element.urlGithub}
                                  className="link github-link"
+                                 aria-label="Github"
                                  target="blank"
+                                 lang="en"
                                  rel="noreferrer"
                               >
                                  GitHub

@@ -21,6 +21,7 @@ const TypeWriter = () => {
                selectedPhrase && `typewriter-title-two color-${selectedPhrase}`
             }
             aria-label={selectedPhrase}
+            lang="en"
          >
             {currentPhrase}
          </span>
