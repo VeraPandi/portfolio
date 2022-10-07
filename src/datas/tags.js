@@ -14,5 +14,4 @@ export const skills = [
    "Swagger",
    "MongoDB",
    "Sass",
-   "NPM",
 ];
