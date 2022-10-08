@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { skills } from "../datas/tags";
+import { ThemeContext } from "../../context/ThemeContext";
+import { skills } from "../../datas/tags";
 
 const Tags = () => {
    const { theme } = useContext(ThemeContext);

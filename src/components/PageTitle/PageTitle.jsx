@@ -1,6 +1,6 @@
 const PageTitle = ({ title, text }) => {
    return (
-      <div className="title">
+      <div className="page-title">
          <h3 className={text}>{title}</h3>
       </div>
    );

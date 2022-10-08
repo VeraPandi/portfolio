@@ -14,6 +14,7 @@ const Footer = () => {
                href="https://github.com/VeraPandi"
                target="_blank"
                lang="en"
+               rel="noreferrer"
             >
                <FaGithub className="icon" />
             </a>
@@ -24,6 +25,7 @@ const Footer = () => {
                href="https://www.linkedin.com/in/v-l-28bbab24a/"
                target="_blank"
                lang="en"
+               rel="noreferrer"
             >
                <FaLinkedin className="icon" />
             </a>

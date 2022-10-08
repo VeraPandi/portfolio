@@ -1,11 +1,7 @@
-.main-center .title,
-.main-bottom .title-text {
+.main-center .page-title-text,
+.main-bottom .page-title-text,
+.projects-page .page-title-text {
    position: relative;
-}
-
-.main-center .title-text,
-.main-bottom .title-text,
-.projects-page .title-text {
    margin-left: 20px;
    padding: 85px 20px 50px;
    font-size: 28px;
@@ -29,7 +25,7 @@
 
 /*------- Theme context -------*/
 
-.title-text.darkMode {
+.page-title-text.darkMode {
    text-shadow: -3px 4px 3px #f7f7f770;
    color: #dadada;
 

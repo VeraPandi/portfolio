@@ -1,18 +1,19 @@
+// Base
 @use "./base/global";
 @use "./base/animations";
 
-@use "./components/pageTitle";
+// Components
+@use "../components/PageTitle/pageTitle";
+@use "../components/Mode/mode";
+@use "../components/Header/header";
+@use "../components/Navigation/navigation";
+@use "../components/Intro/intro";
+@use "../components/Cover/cover";
+@use "../components/TypeWriter/typeWriter";
+@use "../components/Card/card";
+@use "../components/Tags/tag";
+@use "../components/Footer/footer";
 
-@use "./layout/intro";
-@use "./layout/cover";
-@use "./layout/header";
-@use "./layout/footer";
-@use "./layout/navigation";
-@use "./layout/mode";
-@use "./layout/typeWriter";
-@use "./layout/card";
-@use "./layout/tag";
-
-@use "./pages/home";
-@use "./pages/projects";
-@use "./pages/notFound";
+// Pages
+@use "../pages/Home/home";
+@use "../pages/NotFound/notFound";

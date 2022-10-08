@@ -1,4 +1,4 @@
-import { usePhrase } from "../hooks/usePhrase";
+import { usePhrase } from "../../hooks/usePhrase";
 
 // Array of phrases to display
 const phrases = ["JavaScript", "React"];
@@ -20,7 +20,7 @@ const TypeWriter = () => {
             className={
                selectedPhrase && `typewriter-title-two color-${selectedPhrase}`
             }
-            aria-label={selectedPhrase}
+            aria-label="JavaScript React"
             lang="en"
          >
             {currentPhrase}

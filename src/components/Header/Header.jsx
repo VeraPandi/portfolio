@@ -1,5 +1,5 @@
-import Mode from "../containers/Mode";
-import Navigation from "../containers/Navigation";
+import Mode from "../Mode/Mode";
+import Navigation from "../Navigation/Navigation";
 
 const Header = () => {
    return (

@@ -1,4 +1,4 @@
-import TypeWriter from "../containers/TypeWriter";
+import TypeWriter from "../TypeWriter/TypeWriter";
 
 const Intro = () => {
    return (

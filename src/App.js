@@ -5,11 +5,11 @@ import {
    Navigate,
 } from "react-router-dom";
 import ThemeContextProvider from "./context/ThemeContext";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import NotFound from "./pages/NotFound";
-import Header from "./containers/Header";
-import Footer from "./containers/Footer";
+import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import NotFound from "./pages/NotFound/NotFound";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./styles/main.scss";
 
 function App() {
