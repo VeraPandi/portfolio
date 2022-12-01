@@ -1,10 +1,17 @@
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+
 /**
  * Displays a card for each project
  * @property {array} array - Datas
+ * @function toggleTheme - Function switching "dark" and "light" mode
+ * @const {string} theme - Current mode name
  * @return {JSX.Element} - Card
  */
 
 const Card = ({ array }) => {
+   const { toggleTheme, theme } = useContext(ThemeContext);
+
    return (
       <div className="cards" aria-label="Liste des projets" tabIndex={0}>
          {array
@@ -17,7 +24,7 @@ const Card = ({ array }) => {
                   <div className="card-content">
                      {/* ---------- Left content ---------- */}
                      <section
-                        className="card-content-left"
+                        className={`card-content-left ${theme}`}
                         aria-label="Images du projet"
                      >
                         <div className="card-cover">
@@ -58,9 +65,11 @@ const Card = ({ array }) => {
                         className="card-content-right"
                         aria-label="Informations sur le projet"
                      >
-                        <h4 className="card-title">{element.title}</h4>
+                        <h4 className={`card-title ${theme}`}>
+                           {element.title}
+                        </h4>
                         <span
-                           className="card-tags"
+                           className={`card-tags ${theme}`}
                            aria-label="Technologies utilisées"
                            lang="en"
                         >
@@ -84,7 +93,7 @@ const Card = ({ array }) => {
                            {element.urlDemo !== undefined && (
                               <a
                                  href={element.urlDemo}
-                                 className="link demo-link"
+                                 className={`link demo-link ${theme}`}
                                  aria-label="Site web"
                                  target="blank"
                                  rel="noreferrer"
@@ -95,7 +104,7 @@ const Card = ({ array }) => {
                            {element.urlGithub !== undefined && (
                               <a
                                  href={element.urlGithub}
-                                 className="link github-link"
+                                 className={`link github-link ${theme}`}
                                  aria-label="Github"
                                  target="blank"
                                  lang="en"

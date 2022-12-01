@@ -1,0 +1,19 @@
+********************************************************
+       Guidelines for testing the "works.js" file
+********************************************************
+
+Each test should verify:
+  - the value is set.
+  - the value is of the correct type.
+
+For arrays, they must contain:
+  - at least one value.
+  - a value of the correct type.
+
+For urls, domain names must be verified + type "undefined" should be checked for undefined URLs.
+For paths, check file formats.
+
+
+********************************************************
+
+Updated: 01/12/2022

@@ -54,7 +54,7 @@ export const usePhrase = (phrases) => {
             return () => clearTimeout(timeout);
          }
 
-         // -------- Sets sentence deletion -------- //
+         // -------- Sets phrase deletion -------- //
          case stepTypes.deleting: {
             // If the phrase is not being written
             if (!currentPhrase) {

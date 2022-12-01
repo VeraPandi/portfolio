@@ -37,16 +37,30 @@
 }
 
 .card-cover {
-   display: none;
+   position: relative;
+   top: 11px;
+   z-index: -1;
+   overflow: hidden;
+   max-height: 150px;
+   height: 100%;
+   margin: 0 20px;
    background-color: #b7b7b7ab;
+   border-radius: 10px 10px 0 0;
+
+   @media (min-width: 375px) {
+      display: flex;
+      margin: 0 40px;
+   }
 
    @media (min-width: 698px) {
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      height: 100%;
+      top: 0;
+      max-height: 100%;
       width: 100%;
+      margin: 0;
       border-radius: 10px 0 0 10px;
    }
 }
@@ -66,12 +80,25 @@
 .image-mobile {
    display: flex;
    flex-direction: column;
-   width: max-content;
+   left: 11%;
+   width: 100%;
+   margin: auto;
    transform: rotate(-46deg);
+
+   @media (min-width: 375px) {
+      position: relative;
+      top: -100px;
+   }
+
+   @media (min-width: 698px) {
+      top: 0;
+      width: auto;
+   }
 }
 
 /* ----- Right content ----- */
 .card-content-right {
+   width: revert;
    margin: 0 20px;
    padding: 35px 20px 30px;
    text-align: center;
@@ -99,6 +126,8 @@
    font-size: 28px;
    color: #f7f7f7;
 
+   hyphens: auto;
+
    @media (min-width: 698px) {
       font-size: 32px;
    }
@@ -115,7 +144,7 @@
 
 .card-intro {
    margin: 30px 0;
-   line-height: 1.3;
+   line-height: 1.5;
    color: #9f9f9f;
 
    @media (min-width: 698px) {
@@ -153,12 +182,25 @@
 .link.github-link {
    &:after {
       content: "";
+      display: flex;
       position: absolute;
       bottom: -1px;
       left: 0;
-      display: flex;
       height: 2px;
       width: 100%;
       background-color: white;
    }
+}
+
+/*------- Theme context -------*/
+
+.card-content-left.darkMode {
+   opacity: 0.85;
+}
+
+.card-title.darkMode,
+.card-tags.darkMode,
+.demo-link.darkMode,
+.github-link.darkMode {
+   color: #dadada;
 }
