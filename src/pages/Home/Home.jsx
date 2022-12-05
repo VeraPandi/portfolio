@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { worksList } from "../../datas/works";
+import { skills } from "../../datas/tags";
 import Cover from "../../components/Cover/Cover";
 import Intro from "../../components/Intro/Intro";
 import Card from "../../components/Card/Card";
@@ -27,7 +28,7 @@ const Home = () => {
 
          <section className="main-bottom">
             <PageTitle title="Technos" text={`page-title-text ${theme}`} />
-            <Tags />
+            <Tags array={skills} />
          </section>
       </main>
    );

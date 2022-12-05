@@ -14,7 +14,11 @@ const Mode = () => {
    const { toggleTheme, theme } = useContext(ThemeContext);
 
    return (
-      <div className="mode-settings-btn" aria-label="Changer le thème visuel">
+      <div
+         className="mode-settings-btn"
+         data-cy="mode-btn"
+         aria-label="Changer le thème visuel"
+      >
          {theme === "darkMode" && (
             <button
                className={`mode-btn-light ${theme}`}

@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { skills } from "../../datas/tags";
 
-const Tags = () => {
+const Tags = ({ array }) => {
    const { theme } = useContext(ThemeContext);
 
    return (
-      <div className="tags">
+      <div className="tags" data-cy="tags">
          <ul>
-            {skills.map((element, index) => (
+            {array.sort().map((element, index) => (
                <li
                   className={`tag ${theme}`}
                   key={`${element}-${index}`}

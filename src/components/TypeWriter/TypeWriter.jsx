@@ -15,11 +15,14 @@ const TypeWriter = () => {
 
    return (
       <h2 className="typewriter">
-         <span className="typewriter-title-one">Je suis développeuse </span>
+         <span className="typewriter-title-one" data-cy="typewriter-title-one">
+            Je suis développeuse{" "}
+         </span>
          <span
             className={
                selectedPhrase && `typewriter-title-two color-${selectedPhrase}`
             }
+            data-cy="typewriter-title-two"
             aria-label="JavaScript React"
             lang="en"
          >

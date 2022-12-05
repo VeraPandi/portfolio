@@ -1,8 +1,8 @@
 export const skills = [
    "HTML5",
-   "CSS3",
    "JavaScript ES5/ES6",
    "Git",
+   "CSS3",
    "GitHub",
    "Jest",
    "Redux",
