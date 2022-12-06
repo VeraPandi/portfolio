@@ -13,7 +13,12 @@ const Card = ({ array }) => {
    const { toggleTheme, theme } = useContext(ThemeContext);
 
    return (
-      <div className="cards" aria-label="Liste des projets" tabIndex={0}>
+      <div
+         className="cards"
+         data-cy="cards"
+         aria-label="Liste des projets"
+         tabIndex={0}
+      >
          {array
             .map((element, index) => (
                <article
@@ -25,6 +30,7 @@ const Card = ({ array }) => {
                      {/* ---------- Left content ---------- */}
                      <section
                         className={`card-content-left ${theme}`}
+                        data-cy="card-content-left"
                         aria-label="Images du projet"
                      >
                         <div className="card-cover">
@@ -63,6 +69,7 @@ const Card = ({ array }) => {
                      {/* ---------- Right content ---------- */}
                      <section
                         className="card-content-right"
+                        data-cy="card-content-right"
                         aria-label="Informations sur le projet"
                      >
                         <h4 className={`card-title ${theme}`}>

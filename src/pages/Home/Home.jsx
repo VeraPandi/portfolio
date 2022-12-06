@@ -18,7 +18,7 @@ const Home = () => {
             <Intro />
          </section>
 
-         <section className="main-center">
+         <section className="main-center" data-cy="main-center">
             <PageTitle
                title="Dernier projet"
                text={`page-title-text ${theme}`}
@@ -26,7 +26,7 @@ const Home = () => {
             <Card array={worksList.slice(-1)} />
          </section>
 
-         <section className="main-bottom">
+         <section className="main-bottom" data-cy="main-bottom">
             <PageTitle title="Technos" text={`page-title-text ${theme}`} />
             <Tags array={skills} />
          </section>

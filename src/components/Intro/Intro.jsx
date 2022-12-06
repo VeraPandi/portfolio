@@ -3,10 +3,12 @@ import TypeWriter from "../TypeWriter/TypeWriter";
 const Intro = () => {
    return (
       <div className="intro">
-         <h1 className="intro-title">Vera Pandi</h1>
+         <h1 className="intro-title" data-cy="intro-title">
+            Vera Pandi
+         </h1>
          <TypeWriter />
 
-         <p>
+         <p data-cy="intro-paragraph">
             Sensible au Responsive Design, UI/UX Design, au beau et au bien
             fait.
          </p>

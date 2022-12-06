@@ -6,7 +6,7 @@ const Cover = () => {
 
    return (
       <div className={`cover-wrapper ${theme}`}>
-         <div className="cover"></div>
+         <div className="cover" data-cy="cover"></div>
       </div>
    );
 };
