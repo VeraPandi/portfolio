@@ -7,6 +7,7 @@ describe("Home page", () => {
       cy.visit("/portfolio");
    });
 
+   //* ------------- Theme ------------ *//
    context("Display theme", () => {
       it("A light display theme is displayed by default", () => {
          cy.get("html").should("have.class", "lightMode");
@@ -18,6 +19,7 @@ describe("Home page", () => {
       });
    });
 
+   //* ------------- Hero ------------- *//
    context("Hero section", () => {
       it("An image is visible", () => {
          cy.get("[data-cy='cover']").should("be.visible");
@@ -44,6 +46,7 @@ describe("Home page", () => {
       });
    });
 
+   //* ------------ Cards ------------- *//
    context("Card section", () => {
       it("A section title is visible", () => {
          cy.get("[data-cy='main-center']")
@@ -86,7 +89,9 @@ describe("Home page", () => {
                   .find(".card-context")
                   .should(
                      "contain.text",
-                     `${element.type} réalisé seule en ${element.time} semaines.`
+                     element.type === "Side project"
+                        ? `${element.type} réalisé seule en ${element.time} semaines.`
+                        : `Projet de formation réalisé seule en ${element.time} semaines.`
                   )
                   .and("have.length", element.type.length > 0)
                   .and("have.length", element.time.length > 0);
@@ -107,6 +112,7 @@ describe("Home page", () => {
       );
    });
 
+   //* ------------- Tags ------------- *//
    context("Tags section", () => {
       it("A section title is visible", () => {
          cy.get('[data-cy="main-bottom"]')
@@ -122,6 +128,7 @@ describe("Home page", () => {
       });
    });
 
+   //* ------------ Footer ------------ *//
    context("Footer section", () => {
       it("A section title is visible", () => {
          cy.get('[data-cy="followMe"]').should("have.text", "Me suivre");
@@ -141,6 +148,7 @@ describe("Home page", () => {
       });
    });
 
+   //* ---------- Navigation ---------- *//
    context("Navigation section", () => {
       it("Current page navigation link is shown as active", () => {
          cy.get('[data-cy="navigation"] > a')

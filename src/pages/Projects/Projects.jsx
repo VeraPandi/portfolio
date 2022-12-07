@@ -8,7 +8,7 @@ const Projects = () => {
    const { theme } = useContext(ThemeContext);
 
    return (
-      <main className="projects-page main">
+      <main className="projects-page main" data-cy="projects-page-main">
          <PageTitle title="Projets" text={`page-title-text ${theme}`} />
          <Card array={worksList} />
       </main>
