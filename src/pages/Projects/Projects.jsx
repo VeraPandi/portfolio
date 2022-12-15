@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { worksList } from "../../datas/works";
+import { worksList } from "../../services/works";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Card from "../../components/Card/Card";
 

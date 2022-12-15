@@ -1,6 +1,6 @@
 import visit from "cypress/react18";
-import { worksList } from "../../src/datas/works";
-import { skills } from "../../src/datas/tags";
+import { worksList } from "../../src/services/works";
+import { skills } from "../../src/services/tags";
 
 describe("Home page", () => {
    it("The page can be visited", () => {

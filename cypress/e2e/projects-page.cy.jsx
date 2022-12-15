@@ -1,5 +1,5 @@
 import visit from "cypress/react18";
-import { worksList } from "../../src/datas/works";
+import { worksList } from "../../src/services/works";
 
 describe("Projects page", () => {
    it("The page can be visited", () => {

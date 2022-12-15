@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { worksList } from "../../datas/works";
-import { skills } from "../../datas/tags";
+import { worksList } from "../../services/works";
+import { skills } from "../../services/tags";
 import Cover from "../../components/Cover/Cover";
 import Intro from "../../components/Intro/Intro";
 import Card from "../../components/Card/Card";
