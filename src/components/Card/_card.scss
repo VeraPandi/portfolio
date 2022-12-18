@@ -18,20 +18,20 @@
 }
 
 .cards {
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       margin: 0 10%;
    }
 }
 
 .card-content {
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       display: flex;
    }
 }
 
 /* ----- Left content ----- */
 .card-content-left {
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       min-width: 35%;
    }
 }
@@ -40,10 +40,10 @@
    position: relative;
    top: 11px;
    z-index: -1;
-   overflow: hidden;
    max-height: 150px;
    height: 100%;
    margin: 0 20px;
+   overflow: hidden;
    background-color: #b7b7b7ab;
    border-radius: 10px 10px 0 0;
 
@@ -52,15 +52,15 @@
       margin: 0 40px;
    }
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
       top: 0;
       max-height: 100%;
       width: 100%;
       margin: 0;
+      overflow: hidden;
       border-radius: 10px 0 0 10px;
    }
 }
@@ -68,7 +68,7 @@
 .card-cover img {
    filter: saturate(0);
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       max-height: 150px;
       width: auto;
       margin: 3px;
@@ -90,7 +90,7 @@
       top: -100px;
    }
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       top: 0;
       width: auto;
    }
@@ -110,7 +110,7 @@
       text-align: inherit;
    }
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       min-width: 55%;
       margin: 0;
       border-radius: 0 10px 10px 0;
@@ -125,10 +125,9 @@
    margin-bottom: 5px;
    font-size: 28px;
    color: #f7f7f7;
-
    hyphens: auto;
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       font-size: 32px;
    }
 }
@@ -137,7 +136,7 @@
    font-size: 14px;
    color: #f7f7f7;
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       font-size: 15px;
    }
 }
@@ -147,7 +146,7 @@
    line-height: 1.5;
    color: #9f9f9f;
 
-   @media (min-width: 698px) {
+   @media (min-width: 798px) {
       margin: 35px 0;
    }
 }
@@ -180,15 +179,21 @@
 
 .link.demo-link,
 .link.github-link {
-   &:after {
-      content: "";
-      display: flex;
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: white;
+   &:hover,
+   &:focus {
+      &::after {
+         content: "";
+         display: flex;
+         height: 2px;
+         width: 10px;
+         margin: 5px auto -9px;
+         border: 1px solid #f7f7f7;
+         border-radius: 50%;
+
+         @media (min-width: 294px) {
+            margin: 5px auto -10px;
+         }
+      }
    }
 }
 
@@ -203,4 +208,14 @@
 .demo-link.darkMode,
 .github-link.darkMode {
    color: #dadada;
+}
+
+.link.demo-link.darkMode,
+.link.github-link.darkMode {
+   &:hover,
+   &:focus {
+      &::after {
+         border: 1px solid #dadada;
+      }
+   }
 }

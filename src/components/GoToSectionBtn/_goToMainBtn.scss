@@ -1,0 +1,26 @@
+.goToMain-btn {
+   display: none;
+
+   @media (min-width: 1100px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 91.5%;
+      left: calc(50vw - 20px);
+      height: 30px;
+      width: 30px;
+      background-color: #f1f1f1;
+      border-radius: 50px;
+      opacity: 0.9;
+      cursor: pointer;
+   }
+}
+
+/*------- Theme context -------*/
+
+.goToMain-btn.darkMode {
+   color: #dadada;
+   background-color: transparent;
+   border: 2px solid #dadada;
+}
