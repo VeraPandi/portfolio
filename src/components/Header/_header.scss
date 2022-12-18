@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .header {
    position: relative;
    display: flex;
@@ -5,7 +7,7 @@
    align-items: center;
    height: 54px;
    padding: 10px;
-   background-color: #0f0f0f;
+   background-color: $dark-mode;
 
    @media (min-width: 798px) {
       padding: 10px 20px;

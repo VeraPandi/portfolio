@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .notFound {
    position: relative;
    width: 100%;
@@ -9,7 +11,7 @@
    justify-content: center;
    min-height: 100vh;
    margin: 0;
-   background-color: #f1f1f1;
+   background-color: $light-mode;
 }
 
 .notFound-content {
@@ -23,23 +25,23 @@
 .error-code {
    font-size: 100px;
    font-weight: 500;
-   color: #0f0f0f;
+   color: $dark-mode;
 }
 
 .error-message {
    margin: 50px;
    font-size: 24px;
    text-align: center;
-   color: #0f0f0f;
+   color: $dark-mode;
 }
 
 /*------- Theme context -------*/
 
 .notFound-main.darkMode {
-   background-color: #0f0f0f;
+   background-color: $dark-mode;
 }
 
 .error-code.darkMode,
 .error-message.darkMode {
-   color: #dadada;
+   color: $light;
 }

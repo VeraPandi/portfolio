@@ -1,17 +1,19 @@
+@use "../../styles/abstracts" as *;
+
 .footer {
    display: flex;
    flex-direction: column;
    align-items: center;
    padding-top: 20px;
    padding-bottom: 20px;
-   background-color: #0f0f0f;
+   background-color: $dark-mode;
 }
 
 .followMe {
    padding: 10px;
    font-size: 15px;
    text-transform: uppercase;
-   color: #dadada;
+   color: $light;
 
    @media (min-width: 798px) {
       font-size: 16px;
@@ -23,7 +25,7 @@
 }
 
 .media-icons a {
-   color: #dadada;
+   color: $light;
 }
 
 .footer .github-link {

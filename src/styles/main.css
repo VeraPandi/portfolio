@@ -75,41 +75,12 @@ html.darkMode {
   opacity: 1;
 }
 
-.page-title,
-.cards,
-.tags,
 .projects-page {
   position: relative;
   bottom: 0;
   -webkit-animation: fade-top 1400ms ease-in-out;
           animation: fade-top 1400ms ease-in-out;
   opacity: 1;
-}
-
-.link.demo-link,
-.link.github-link {
-  position: relative;
-  margin: 16px 20px;
-  padding: 0;
-  overflow: hidden;
-}
-.link.demo-link:hover,
-.link.github-link:hover {
-  transform: scale(0.98);
-  text-decoration: none;
-}
-.link.demo-link:hover:after,
-.link.github-link:hover:after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  display: flex;
-  height: 2px;
-  width: 100%;
-  -webkit-animation: line 0.7s cubic-bezier(0.55, 0.06, 0.68, 0.19) both;
-          animation: line 0.7s cubic-bezier(0.55, 0.06, 0.68, 0.19) both;
-  background: linear-gradient(90deg, transparent, #f7f7f7);
 }
 
 /* --- Fade top --- */
@@ -312,6 +283,17 @@ html.darkMode {
   background-color: #dadada;
   border-radius: 50%;
 }
+.link.home-link:not(.active):hover::after, .link.home-link:not(.active):focus::after,
+.link.projects-link:not(.active):hover::after,
+.link.projects-link:not(.active):focus::after {
+  content: "";
+  display: flex;
+  height: 2px;
+  width: 10px;
+  margin: 5px auto;
+  border: 1px solid #dadada;
+  border-radius: 50%;
+}
 
 .intro {
   padding: 30px 20px 50px;
@@ -368,6 +350,7 @@ html.darkMode {
   background-position: center;
   background-size: cover;
   height: 450px;
+  box-shadow: inset 5px 0px 35px 50px #000;
 }
 @media (min-width: 1100px) {
   .cover {
@@ -386,16 +369,16 @@ html.darkMode {
 }
 @media (min-width: 1100px) {
   .goToMain-btn {
-    background-color: #f1f1f1;
-    position: absolute;
-    height: 30px;
-    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: calc(50vw - 20px);
-    border-radius: 50px;
+    position: absolute;
     top: 91.5%;
+    left: calc(50vw - 20px);
+    height: 30px;
+    width: 30px;
+    background-color: #f1f1f1;
+    border-radius: 50px;
     opacity: 0.9;
     cursor: pointer;
   }
@@ -403,8 +386,8 @@ html.darkMode {
 
 /*------- Theme context -------*/
 .goToMain-btn.darkMode {
-  background-color: transparent;
   color: #dadada;
+  background-color: transparent;
   border: 2px solid #dadada;
 }
 
@@ -482,20 +465,20 @@ html.darkMode {
   }
 }
 
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .cards {
     margin: 0 10%;
   }
 }
 
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-content {
     display: flex;
   }
 }
 
 /* ----- Left content ----- */
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-content-left {
     min-width: 35%;
   }
@@ -505,10 +488,10 @@ html.darkMode {
   position: relative;
   top: 11px;
   z-index: -1;
-  overflow: hidden;
   max-height: 150px;
   height: 100%;
   margin: 0 20px;
+  overflow: hidden;
   background-color: rgba(183, 183, 183, 0.6705882353);
   border-radius: 10px 10px 0 0;
 }
@@ -518,16 +501,16 @@ html.darkMode {
     margin: 0 40px;
   }
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-cover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     top: 0;
     max-height: 100%;
     width: 100%;
     margin: 0;
+    overflow: hidden;
     border-radius: 10px 0 0 10px;
   }
 }
@@ -535,7 +518,7 @@ html.darkMode {
 .card-cover img {
   filter: saturate(0);
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-cover img {
     max-height: 150px;
     width: auto;
@@ -560,7 +543,7 @@ html.darkMode {
     top: -100px;
   }
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .image-desktop,
 .image-mobile {
     top: 0;
@@ -583,7 +566,7 @@ html.darkMode {
     text-align: inherit;
   }
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-content-right {
     min-width: 55%;
     margin: 0;
@@ -603,7 +586,7 @@ html.darkMode {
   -webkit-hyphens: auto;
           hyphens: auto;
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-title {
     font-size: 32px;
   }
@@ -613,7 +596,7 @@ html.darkMode {
   font-size: 14px;
   color: #f7f7f7;
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-tags {
     font-size: 15px;
   }
@@ -624,7 +607,7 @@ html.darkMode {
   line-height: 1.5;
   color: #9f9f9f;
 }
-@media (min-width: 698px) {
+@media (min-width: 798px) {
   .card-intro {
     margin: 35px 0;
   }
@@ -657,16 +640,23 @@ html.darkMode {
   color: #f7f7f7;
 }
 
-.link.demo-link:after,
-.link.github-link:after {
+.link.demo-link:hover::after, .link.demo-link:focus::after,
+.link.github-link:hover::after,
+.link.github-link:focus::after {
   content: "";
   display: flex;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
   height: 2px;
-  width: 100%;
-  background-color: white;
+  width: 10px;
+  margin: 5px auto -9px;
+  border: 1px solid #f7f7f7;
+  border-radius: 50%;
+}
+@media (min-width: 294px) {
+  .link.demo-link:hover::after, .link.demo-link:focus::after,
+.link.github-link:hover::after,
+.link.github-link:focus::after {
+    margin: 5px auto -10px;
+  }
 }
 
 /*------- Theme context -------*/
@@ -679,6 +669,12 @@ html.darkMode {
 .demo-link.darkMode,
 .github-link.darkMode {
   color: #dadada;
+}
+
+.link.demo-link.darkMode:hover::after, .link.demo-link.darkMode:focus::after,
+.link.github-link.darkMode:hover::after,
+.link.github-link.darkMode:focus::after {
+  border: 1px solid #dadada;
 }
 
 .main-bottom .tags {
@@ -700,18 +696,22 @@ html.darkMode {
 }
 
 .tags ul {
-  margin: 0 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 10%;
+  margin: 0 5%;
   padding: 0;
-  list-style-type: none;
   line-height: 1.5;
+  list-style-type: none;
+}
+@media (min-width: 798px) {
+  .tags ul {
+    margin: 0 10%;
+  }
 }
 
 .tags li {
-  padding: 5px 20px;
+  padding: 5px 15px;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 18px;
   font-weight: 500;

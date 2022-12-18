@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .mode-settings-btn {
    padding: 10px;
 
@@ -12,7 +14,7 @@
    padding: 0;
    transform: rotate(15deg);
    font-size: 17px;
-   color: #dadada;
+   color: $light;
    background-color: transparent;
    cursor: pointer;
 
@@ -25,7 +27,7 @@
    position: relative;
    padding: 20px 10px 10px 0;
    font-size: 24px;
-   color: #dadada;
-   background-color: #0f0f0f;
+   color: $light;
+   background-color: $dark-mode;
    cursor: pointer;
 }

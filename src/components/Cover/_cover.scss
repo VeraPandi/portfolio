@@ -1,6 +1,8 @@
+@use "../../styles/abstracts" as *;
+
 .cover-wrapper {
    padding-top: 35px;
-   background-color: #000;
+   background-color: $black;
    opacity: 0.94;
 
    @media (min-width: 1100px) {
@@ -13,6 +15,7 @@
    background-position: center;
    background-size: cover;
    height: 450px;
+   box-shadow: inset 5px 0px 35px 50px $black;
 
    @media (min-width: 1100px) {
       height: 100%;
@@ -22,6 +25,6 @@
 /*------- Theme context -------*/
 
 .cover-wrapper.darkMode {
-   background-color: #000;
+   background-color: $black;
    opacity: 0.94;
 }

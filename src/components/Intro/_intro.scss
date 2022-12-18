@@ -1,8 +1,10 @@
+@use "../../styles/abstracts" as *;
+
 .intro {
    padding: 30px 20px 50px;
    text-align: center;
-   color: #dadada;
-   background-color: #0f0f0f;
+   color: $light;
+   background-color: $dark-mode;
 
    @media (min-width: 375px) {
       text-align: inherit;
@@ -31,5 +33,5 @@
 .intro p {
    margin: 0 0 20px;
    line-height: 1.5;
-   color: #9f9f9f;
+   color: $dark-text;
 }

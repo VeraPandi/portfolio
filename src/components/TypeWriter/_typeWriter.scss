@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .typewriter {
    height: 120px;
    margin-bottom: 50px;
@@ -40,9 +42,9 @@
 }
 
 .color-JavaScript {
-   color: #fb630a;
+   color: $orange;
 }
 
 .color-React {
-   color: #0093db;
+   color: $blue;
 }

@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .main-bottom .tags {
    padding-bottom: 60px;
 
@@ -23,6 +25,10 @@
    padding: 0;
    line-height: 1.5;
    list-style-type: none;
+
+   @media (min-width: 798px) {
+      margin: 0 10%;
+   }
 }
 
 .tags li {
@@ -44,5 +50,5 @@
 /*------- Theme context -------*/
 
 .tags li.darkMode {
-   color: #9f9f9f;
+   color: $dark-text;
 }

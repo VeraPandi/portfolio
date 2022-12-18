@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .navigation {
    display: flex;
    justify-content: space-between;
@@ -10,7 +12,7 @@
 
 .navigation .link {
    font-size: 15px;
-   color: #dadada;
+   color: $light;
 
    @media (min-width: 798px) {
       font-size: 16px;
@@ -34,7 +36,7 @@
          height: 4px;
          width: 12px;
          margin: 5px auto;
-         background-color: #dadada;
+         background-color: $light;
          border-radius: 50%;
       }
    }
@@ -48,7 +50,7 @@
             height: 2px;
             width: 10px;
             margin: 5px auto;
-            border: 1px solid #dadada;
+            border: 1px solid $light;
             border-radius: 50%;
          }
       }

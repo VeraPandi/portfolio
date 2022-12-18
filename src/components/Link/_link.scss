@@ -1,0 +1,9 @@
+@use "../../styles/abstracts" as *;
+
+.link,
+a {
+   font-family: "Bai Jamjuree", sans-serif;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: $dark-mode;
+}

@@ -1,7 +1,9 @@
+@use "../../styles/abstracts" as *;
+
 /*---- Document root / body ----*/
 html {
    height: 100vh;
-   background-color: #f1f1f1;
+   background-color: $light-mode;
 }
 
 body {
@@ -38,25 +40,17 @@ h4 {
    font-weight: 500;
 }
 
-/*--- Button / link ---*/
+/*------- Button -------*/
 button {
    font-family: "Inter", sans-serif;
    font-size: 35px;
    letter-spacing: 0.4px;
-   background-color: #f1f1f1;
+   background-color: $light-mode;
    border-style: none;
-}
-
-.link,
-a {
-   font-family: "Bai Jamjuree", sans-serif;
-   text-transform: uppercase;
-   text-decoration: none;
-   color: #0f0f0f;
 }
 
 /*------- Theme context -------*/
 
 html.darkMode {
-   background-color: #0f0f0f;
+   background-color: $dark-mode;
 }

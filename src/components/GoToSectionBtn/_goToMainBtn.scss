@@ -1,3 +1,5 @@
+@use "../../styles/abstracts" as *;
+
 .goToMain-btn {
    display: none;
 
@@ -10,7 +12,7 @@
       left: calc(50vw - 20px);
       height: 30px;
       width: 30px;
-      background-color: #f1f1f1;
+      background-color: $light-mode;
       border-radius: 50px;
       opacity: 0.9;
       cursor: pointer;
@@ -20,7 +22,7 @@
 /*------- Theme context -------*/
 
 .goToMain-btn.darkMode {
-   color: #dadada;
+   color: $light;
    background-color: transparent;
-   border: 2px solid #dadada;
+   border: 2px solid $light;
 }
