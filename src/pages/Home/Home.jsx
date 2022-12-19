@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { worksList } from "../../services/works";
 import { skills } from "../../services/tags";
@@ -13,12 +13,24 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 const Home = () => {
    const { theme } = useContext(ThemeContext);
 
-   const goToMain = () => {
+   /**
+    * Displays a button to go to a section on the page
+    * @const {number} positionY - Initial vertical position equal to 0
+    * @function setPositionY - Get the vertical position after the button event
+    * @function goToMain - Sets the vertical position of the "main" section
+    * @return {JSX.Element} - button
+    */
+
+   const [positionY, setPositionY] = useState(0);
+
+   const goToMain = (e) => {
       window.scrollTo({
          top: 865,
          left: 0,
          behavior: "smooth",
       });
+
+      setPositionY(e.clientY);
    };
 
    return (
@@ -30,6 +42,7 @@ const Home = () => {
 
          <GoToSectionBtn
             className={`goToMain-btn ${theme}`}
+            dataCy={positionY}
             event={goToMain}
             aria="Aller au contenu principal"
             icon={<AiOutlineArrowDown />}

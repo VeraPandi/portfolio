@@ -44,6 +44,15 @@ describe("Home page", () => {
             "JavaScript"
          );
       });
+
+      it("A button allows you to go to a section on the page", () => {
+         // The initial position on the page must be 0
+         cy.get(".goToMain-btn")
+            .click()
+            .invoke("data", "position")
+            // If the move has occurred, the value should no longer be 0
+            .then((position) => cy.wrap(position).should("not.equal", 0));
+      });
    });
 
    //* ------------ Cards ------------- *//

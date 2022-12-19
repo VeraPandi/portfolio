@@ -1,6 +1,11 @@
-const GoToSectionBtn = ({ className, event, aria, icon }) => {
+const GoToSectionBtn = ({ className, dataCy, event, aria, icon }) => {
    return (
-      <button className={className} onClick={event} aria-label={aria}>
+      <button
+         className={className}
+         data-position={dataCy}
+         onClick={event}
+         aria-label={aria}
+      >
          {icon}
       </button>
    );
