@@ -8,7 +8,6 @@ export const worksList = [
             type: "Desktop",
             images: [
                "/portfolio/images/Work1/Desktop/Work1DashboardEmployeeDesktop.jpg",
-               "/portfolio/images/Work1/Desktop/Work1DashboardRHDesktop.jpg",
             ],
          },
       ],
@@ -24,6 +23,7 @@ export const worksList = [
       ],
       type: "Formation",
       time: "5",
+      member: "Seul",
       urlDemo: "https://verapandi.github.io/",
       urlGithub: "https://github.com/VeraPandi/portfolio",
    },
@@ -36,7 +36,6 @@ export const worksList = [
             type: "Desktop",
             images: [
                "/portfolio/images/Work3/Desktop/Work3Profile1Desktop.jpg",
-               "/portfolio/images/Work3/Desktop/Work3Profile2Desktop.jpg",
             ],
          },
       ],
@@ -68,6 +67,7 @@ export const worksList = [
       ],
       type: "Formation",
       time: "4",
+      member: "Seul",
       urlDemo: "https://verapandi.github.io/",
       urlGithub: "https://github.com/VeraPandi/portfolio",
    },
@@ -78,17 +78,11 @@ export const worksList = [
       gallery: [
          {
             type: "Desktop",
-            images: [
-               "/portfolio/images/Work4/Desktop/Work4HomeDesktop.jpg",
-               "/portfolio/images/Work4/Desktop/Work4FormDesktop.jpg",
-            ],
+            images: ["/portfolio/images/Work4/Desktop/Work4HomeDesktop.jpg"],
          },
          {
             type: "Mobile",
-            images: [
-               "/portfolio/images/Work4/Mobile/Work4HomeMobile.jpg",
-               "/portfolio/images/Work4/Mobile/Work4FormMobile.jpg",
-            ],
+            images: ["/portfolio/images/Work4/Mobile/Work4HomeMobile.jpg"],
          },
       ],
       intro: "Dans le cadre de cette mission, j'ai été chargée de créer une application bancaire responsive permettant aux clients de se connecter et de gérer leur compte et profil. Au cours de sa réalisation, j'ai intégré les maquettes de l'application ; implémenté un gestionnaire d'état ; modélisé une API des transactions bancaires en suivant les directives Swagger.",
@@ -120,6 +114,7 @@ export const worksList = [
       ],
       type: "Formation",
       time: "5",
+      member: "Seul",
       urlDemo: "https://verapandi.github.io/",
       urlGithub: "https://github.com/VeraPandi/portfolio",
    },
@@ -130,10 +125,7 @@ export const worksList = [
       gallery: [
          {
             type: "Desktop",
-            images: [
-               "/portfolio/images/Work5/Desktop/Work5FormDesktop.jpg",
-               "/portfolio/images/Work5/Desktop/Work5TableDesktop.jpg",
-            ],
+            images: ["/portfolio/images/Work5/Desktop/Work5FormDesktop.jpg"],
          },
       ],
       intro: "Dans le cadre de cette mission, j'ai été chargée de convertir une application web interne JQuery en React afin de réduire sa dette technique. Au cours de sa réalisation, j'ai converti l'ensemble de ses fonctionnalités en React ; créé un design responsive plus moderne et lisible pour les utilisateurs ; implémenté un gestionnaire d'état ; audité les performances pour les maintenir à leur meilleur niveau ; converti une fonctionnalité de l'application en plugin, qu'ensuite j'ai publié sur NPM.",
@@ -164,27 +156,22 @@ export const worksList = [
       ],
       type: "Formation",
       time: "3",
+      member: "Seul",
       urlDemo: "https://verapandi.github.io/",
       urlGithub: "https://github.com/VeraPandi/portfolio",
    },
    {
       id: "6",
-      title: "Portfolio",
+      title: "Création d'un portfolio",
       cover: "/portfolio/images/covers/Work6Cover.jpg",
       gallery: [
          {
             type: "Desktop",
-            images: [
-               "/portfolio/images/Work6/Desktop/Work6HomeDesktop.jpg",
-               "/portfolio/images/Work6/Desktop/Work6ProjectsDesktop.jpg",
-            ],
+            images: ["/portfolio/images/Work6/Desktop/Work6HomeDesktop.jpg"],
          },
          {
             type: "Mobile",
-            images: [
-               "/portfolio/images/Work6/Mobile/Work6HomeMobile.jpg",
-               "/portfolio/images/Work6/Mobile/Work6ProjectsMobile.jpg",
-            ],
+            images: ["/portfolio/images/Work6/Mobile/Work6HomeMobile.jpg"],
          },
       ],
       intro: "Pour mon portfolio, j'ai voulu créer une application simple, qui va à l'essentiel, contenant une présentation et mes projets réalisés. Quant aux choix techniques que j'ai faits, j'ai souhaité développer mon application uniquement en React, JavaScript et Scss, sans utilisation de bibliothèques. Mon objectif était de continuer à développer et consolider mes connaissances en Javascript et React.",
@@ -215,6 +202,7 @@ export const worksList = [
       ],
       type: "Side project",
       time: "4",
+      member: "Seul",
       urlDemo: "https://verapandi.github.io/portfolio/",
       urlGithub: "https://github.com/VeraPandi/portfolio",
    },

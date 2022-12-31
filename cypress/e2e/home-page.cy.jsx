@@ -7,7 +7,7 @@ describe("Home page", () => {
       cy.visit("/portfolio");
    });
 
-   //* ------------- Theme ------------ *//
+   /* ------------- Theme ------------ */
    context("Display theme", () => {
       it("A light display theme is displayed by default", () => {
          cy.get("html").should("have.class", "lightMode");
@@ -19,7 +19,7 @@ describe("Home page", () => {
       });
    });
 
-   //* ------------- Hero ------------- *//
+   /* ------------- Hero ------------- */
    context("Hero section", () => {
       it("An image is visible", () => {
          cy.get("[data-cy='cover']").should("be.visible");
@@ -55,7 +55,7 @@ describe("Home page", () => {
       });
    });
 
-   //* ------------ Cards ------------- *//
+   /* ------------ Cards ------------- */
    context("Card section", () => {
       it("A section title is visible", () => {
          cy.get("[data-cy='main-center']")
@@ -93,17 +93,33 @@ describe("Home page", () => {
                   .should("have.text", element.intro);
             });
 
-            it("A type and a time", () => {
-               cy.get("[data-cy='card-content-right']")
-                  .find(".card-context")
-                  .should(
-                     "contain.text",
-                     element.type === "Side project"
-                        ? `${element.type} réalisé seule en ${element.time} semaines.`
-                        : `Projet de formation réalisé seule en ${element.time} semaines.`
-                  )
-                  .and("have.length", element.type.length > 0)
-                  .and("have.length", element.time.length > 0);
+            context("Several contextual information", () => {
+               it("A type", () => {
+                  cy.get("[data-cy='card-content-right']")
+                     .find(".type-context")
+                     .should(
+                        "contain.text",
+                        element.type === "Side project"
+                           ? "Side project"
+                           : "Formation"
+                     );
+               });
+
+               it("A member", () => {
+                  cy.get("[data-cy='card-content-right']")
+                     .find(".member-context")
+                     .should(
+                        "contain.text",
+                        element.member === "Seul" ? "Seul" : "En équipe"
+                     );
+               });
+
+               it("A time", () => {
+                  cy.get("[data-cy='card-content-right']")
+                     .find(".time-context")
+                     .should("contain.text", element.time)
+                     .and("have.length", element.time.length > 0);
+               });
             });
 
             it("At least one link", () => {
@@ -121,7 +137,7 @@ describe("Home page", () => {
       );
    });
 
-   //* ------------- Tags ------------- *//
+   /* ------------- Tags ------------- */
    context("Tags section", () => {
       it("A section title is visible", () => {
          cy.get('[data-cy="main-bottom"]')
@@ -137,7 +153,7 @@ describe("Home page", () => {
       });
    });
 
-   //* ------------ Footer ------------ *//
+   /* ------------ Footer ------------ */
    context("Footer section", () => {
       it("A section title is visible", () => {
          cy.get('[data-cy="followMe"]').should("have.text", "Me suivre");
@@ -157,7 +173,7 @@ describe("Home page", () => {
       });
    });
 
-   //* ---------- Navigation ---------- *//
+   /* ---------- Navigation ---------- */
    context("Navigation section", () => {
       it("Current page navigation link is shown as active", () => {
          cy.get('[data-cy="navigation"] > a')

@@ -38,21 +38,13 @@ h4 {
   font-weight: 500;
 }
 
-/*--- Button / link ---*/
+/*------- Button -------*/
 button {
   font-family: "Inter", sans-serif;
   font-size: 35px;
   letter-spacing: 0.4px;
   background-color: #f1f1f1;
   border-style: none;
-}
-
-.link,
-a {
-  font-family: "Bai Jamjuree", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #0f0f0f;
 }
 
 /*------- Theme context -------*/
@@ -138,23 +130,6 @@ html.darkMode {
     margin-left: 0;
   }
 }
-/* --- Line --- */
-@-webkit-keyframes line {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
-}
-@keyframes line {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
-}
 .main-center .page-title-text,
 .main-bottom .page-title-text,
 .projects-page .page-title-text {
@@ -192,6 +167,14 @@ html.darkMode {
 .page-title-text.darkMode::before {
   border-left: 5px solid #dadada;
   box-shadow: -3px 4px 3px 0 rgba(247, 247, 247, 0.4392156863);
+}
+
+.link,
+a {
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0f0f0f;
 }
 
 .mode-settings-btn {
@@ -447,24 +430,6 @@ html.darkMode {
 }
 
 /* ----- Card (global styles) ----- */
-.projects-page .cards {
-  padding-bottom: 60px;
-}
-
-.projects-page .cards .card {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-.projects-page .cards .card:first-child {
-  padding-top: 0;
-}
-@media (min-width: 798px) {
-  .projects-page .cards .card {
-    padding: 30px 0;
-  }
-}
-
 @media (min-width: 798px) {
   .cards {
     margin: 0 10%;
@@ -580,7 +545,7 @@ html.darkMode {
 }
 
 .card-title {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-size: 28px;
   color: #f7f7f7;
   -webkit-hyphens: auto;
@@ -588,12 +553,13 @@ html.darkMode {
 }
 @media (min-width: 798px) {
   .card-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
 .card-tags {
   font-size: 14px;
+  line-height: 1.3;
   color: #f7f7f7;
 }
 @media (min-width: 798px) {
@@ -606,6 +572,9 @@ html.darkMode {
   margin: 30px 0;
   line-height: 1.5;
   color: #9f9f9f;
+}
+.card-intro.active {
+  display: flex;
 }
 @media (min-width: 798px) {
   .card-intro {
@@ -773,6 +742,10 @@ html.darkMode {
   cursor: pointer;
 }
 
+.home-page .chevron-down {
+  display: none;
+}
+
 .main-top {
   background-color: #fff;
 }
@@ -800,6 +773,47 @@ html.darkMode {
   .main-bottom {
     height: 60vh;
   }
+}
+
+.projects-page .cards {
+  padding-bottom: 60px;
+}
+
+.projects-page .cards .card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.projects-page .cards .card:first-child {
+  padding-top: 0;
+}
+@media (min-width: 798px) {
+  .projects-page .cards .card {
+    padding: 30px 0;
+  }
+}
+
+.projects-page .card-intro {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+.projects-page .chevron-down {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: #9f9f9f;
+  font-size: 20px;
+  cursor: pointer;
+}
+.projects-page .chevron-down.active .chevron-down-icon {
+  transform: rotate(180deg);
 }
 
 .notFound {

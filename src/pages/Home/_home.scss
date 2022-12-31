@@ -1,5 +1,13 @@
 @use "../../styles/abstracts" as *;
 
+.home-page .card-intro {
+   display: flex;
+}
+
+.home-page .chevron-down {
+   display: none;
+}
+
 .main-top {
    background-color: $white;
 
