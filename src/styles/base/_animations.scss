@@ -1,9 +1,12 @@
+@use "../../styles/abstracts" as *;
+
 .navigation {
    position: relative;
    margin-right: 0;
    animation: fade-left 1400ms ease-in-out;
 }
 
+// Card on homepage
 .main-top {
    position: relative;
    margin-left: 0;
@@ -11,27 +14,55 @@
    opacity: 1;
 }
 
-.projects-page {
-   position: relative;
-   bottom: 0;
-   animation: fade-top 1400ms ease-in-out;
-   opacity: 1;
+// Card on projects page
+$anim-duration: 2000ms;
+$anim-delay: $anim-duration / 5;
+
+.projects-page .card {
+   animation: slide-left 2000ms forwards;
+   opacity: 0;
+
+   @for $i from 1 through 5 {
+      &--#{$i} {
+         animation-delay: #{(5 - $i) * 0.5}s;
+      }
+   }
 }
 
-/* --- Fade top --- */
-@keyframes fade-top {
+// Controls card background
+.projects-page .card-cover {
+   @media (min-width: 820px) {
+      transform: translateX(1px);
+   }
+
+   &.darkMode {
+      &::after {
+         content: "";
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         border-radius: 9px 0 0 10px;
+         box-shadow: inset 0 0 0 1px $dark-mode;
+      }
+   }
+}
+
+/* ------- Slide left ------- */
+@keyframes slide-left {
    from {
-      bottom: -100px;
+      transform: translateX(70%);
+      animation-delay: 100ms;
       opacity: 0;
    }
 
    to {
-      bottom: 0;
+      transform: translateX(0%);
+      animation-delay: 2000ms;
       opacity: 1;
    }
 }
 
-/* --- Fade left --- */
+/* ------- Fade left ------- */
 @keyframes fade-left {
    from {
       margin-right: -300px;
@@ -42,7 +73,7 @@
    }
 }
 
-/* --- Fade right --- */
+/* ------- Fade right ------- */
 @keyframes fade-right {
    from {
       margin-left: -600px;
