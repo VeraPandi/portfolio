@@ -70,6 +70,11 @@ describe("An object must contain", () => {
       expect(type).toBe(true);
    });
 
+   test("A member", () => {
+      const type = worksList.every((element) => element.member);
+      expect(type).toBe(true);
+   });
+
    test("A time of type string", () => {
       const time = worksList.every((element) => element.time.length);
       expect(time).toBe(true);
