@@ -26,7 +26,7 @@ const Footer = () => {
                className="linkedin-link"
                data-cy="linkedin-link"
                aria-label="LinkedIn"
-               href="https://www.linkedin.com/in/v-l-28bbab24a/"
+               href="https://www.linkedin.com/in/vl-dev-js-react/"
                target="_blank"
                lang="en"
                rel="noreferrer"
