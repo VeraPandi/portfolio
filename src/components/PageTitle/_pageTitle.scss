@@ -5,7 +5,7 @@
 .projects-page .page-title-text {
    position: relative;
    margin-left: 20px;
-   padding: 85px 20px 50px;
+   padding: 55px 20px;
    font-size: 28px;
    text-align: center;
    text-shadow: -3px 4px 3px $dark-shadow;
@@ -19,9 +19,31 @@
       box-shadow: -3px 4px 3px 0 $dark-shadow;
    }
 
+   @media (min-width: 375px) {
+      padding: 85px 20px;
+   }
+
    @media (min-width: 798px) {
-      padding: 100px 20px 50px;
+      padding: 100px 20px;
       font-size: 32px;
+   }
+
+   @media (min-width: 1100px) {
+      padding: 150px 20px 100px;
+   }
+}
+
+.main-bottom .page-title-text {
+   @media (min-width: 698px) {
+      padding: 85px 20px 75px;
+   }
+
+   @media (min-width: 798px) {
+      padding: 100px 20px 90px;
+   }
+
+   @media (min-width: 1100px) {
+      padding: 145px 20px 90px;
    }
 }
 
@@ -29,7 +51,7 @@
 
 .page-title-text.darkMode {
    text-shadow: -3px 4px 3px $light-shadow;
-   color: $light;
+   color: $light-text;
 
    &::before {
       border-left: 5px solid $light;

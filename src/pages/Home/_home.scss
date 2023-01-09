@@ -1,14 +1,7 @@
 @use "../../styles/abstracts" as *;
 
-.home-page .card-intro {
-   display: flex;
-}
-
-.home-page .chevron-down {
-   display: none;
-}
-
-.main-top {
+/* ------- Global styles ------- */
+.home-page .main-top {
    background-color: $white;
 
    @media (min-width: 1100px) {
@@ -18,19 +11,74 @@
    }
 }
 
-.main-center {
-   @media (min-width: 1100px) {
-      height: 80vh;
-   }
-
+.home-page .main-center {
    @media (min-width: 1400px) {
       max-width: 1400px;
       margin: 0 auto;
    }
 }
 
-.main-bottom {
-   @media (min-width: 1100px) {
-      height: 60vh;
+/* ----------- Card ----------- */
+.home-page .cards {
+   @media (min-width: 820px) {
+      margin: 0 6%;
+   }
+}
+
+.home-page .card {
+   @media (min-width: 820px) {
+      margin: 30px 20px 35px;
+   }
+}
+
+.home-page .card-content {
+   @media (min-width: 820px) {
+      flex-direction: row;
+      justify-content: space-around;
+   }
+}
+
+/* - Left content - */
+.home-page .card-content-left {
+   @media (min-width: 820px) {
+      min-width: 40%;
+   }
+}
+
+.home-page .card-cover {
+   @media (min-width: 820px) {
+      position: relative;
+      top: -5%;
+      right: -4%;
+      height: 100%;
+      min-height: 111%;
+      margin: 0;
+   }
+}
+
+.home-page .image-desktop,
+.home-page .image-mobile {
+   @media (min-width: 820px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      min-height: 100%;
+   }
+}
+
+/* - Right content - */
+.home-page .card-content-right {
+   @media (min-width: 820px) {
+      height: fit-content;
+      max-width: 45%;
+   }
+}
+
+.home-page .card-intro {
+   -webkit-line-clamp: 10;
+
+   @media (min-width: 468px) {
+      -webkit-line-clamp: 5;
    }
 }

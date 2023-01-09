@@ -2,15 +2,10 @@
 
 .intro {
    padding: 30px 20px 50px;
-   text-align: center;
-   color: $light;
+   color: $light-text;
    background-color: $dark-mode;
 
-   @media (min-width: 375px) {
-      text-align: inherit;
-   }
-
-   @media (min-width: 798px) {
+   @media (min-width: 820px) {
       padding: 30px 40px 50px;
       font-size: 18px;
    }

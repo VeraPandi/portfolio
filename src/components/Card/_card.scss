@@ -1,48 +1,28 @@
 @use "../../styles/abstracts" as *;
 
-/* ----- Card (global styles) ----- */
-.cards {
-   @media (min-width: 820px) {
-      margin: 0 10%;
-   }
+/* -------- Global styles -------- */
+.card {
+   margin: 0 20px;
 }
 
 .card-content {
    display: flex;
    flex-direction: column;
-
-   @media (min-width: 820px) {
-      flex-direction: row;
-   }
+   background-color: $black-background;
 }
 
-/* ----- Left content ----- */
-.card-content-left {
-   @media (min-width: 820px) {
-      min-width: 38%;
-   }
-}
-
+/* ---- Left content ---- */
 /* - Cover - */
 .card-cover {
    position: relative;
    max-height: 150px;
    height: 100%;
-   margin: 0 20px;
+   margin: 0;
    overflow: hidden;
    background-color: #b7b7b7ab;
-   border-radius: 10px 10px 0 0;
 
    @media (min-width: 375px) {
       max-height: 200px;
-      margin: 0 40px;
-   }
-
-   @media (min-width: 820px) {
-      top: 0;
-      max-height: 100%;
-      margin: 0;
-      border-radius: 10px 0 0 10px;
    }
 }
 
@@ -63,18 +43,6 @@
 
    @media (max-width: 600px) {
       height: 300px;
-   }
-
-   @media (min-width: 820px) {
-      position: absolute;
-   }
-}
-
-.image-desktop {
-   @media (min-width: 820px) {
-      display: flex;
-      justify-content: center;
-      height: fit-content;
    }
 }
 
@@ -102,27 +70,10 @@
    }
 }
 
-/* ----- Right content ----- */
+/* ---- Right content ---- */
 .card-content-right {
-   width: revert;
-   margin: 0 20px;
    padding: 35px 20px 30px;
-   background-color: $gray-background;
-   border-radius: 0 0 10px 10px;
-
-   @media (min-width: 375px) {
-      margin: 0 40px;
-   }
-
-   @media (min-width: 820px) {
-      min-width: 55%;
-      margin: 0;
-      border-radius: 0 10px 10px 0;
-   }
-
-   @media (min-width: 990px) {
-      padding: 35px 40px 30px;
-   }
+   background-color: $black-background;
 }
 
 .card-title {
@@ -130,11 +81,15 @@
    font-size: 24px;
    hyphens: auto;
    color: $light-text;
+
+   @media (min-width: 820px) {
+      font-size: 28px;
+   }
 }
 
 .card-tags {
    font-size: 14px;
-   line-height: 1.3;
+   line-height: 1.4;
    color: $light-text;
 
    @media (min-width: 820px) {
@@ -152,6 +107,10 @@
    @media (max-width: 300px) {
       display: none;
    }
+
+   @media (min-width: 375px) {
+      margin: 45px 0 5px;
+   }
 }
 
 .first-context {
@@ -159,7 +118,6 @@
    flex-direction: column;
 
    @media (min-width: 500px) {
-      display: flex;
       flex-direction: row;
       width: 70%;
    }
@@ -200,7 +158,7 @@
    display: -webkit-box;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 5;
-   margin: 30px 0 30px;
+   margin: 30px 0;
    overflow: hidden;
    line-height: 1.5;
    hyphens: auto;
@@ -213,10 +171,6 @@
    @media (min-width: 300px) {
       -webkit-line-clamp: 3;
       margin: 0 0 30px;
-   }
-
-   @media (min-width: 820px) {
-      margin: 0 0 35px;
    }
 }
 
@@ -247,7 +201,7 @@
    }
 }
 
-/* ----- Links ----- */
+/* - Links - */
 .view-more {
    display: flex;
    flex-wrap: wrap;
@@ -270,6 +224,10 @@
    @media (min-width: 375px) {
       margin: 10px;
    }
+
+   @media (min-width: 820px) {
+      font-size: 18px;
+   }
 }
 
 .link.demo-link,
@@ -282,7 +240,7 @@
          height: 2px;
          width: 10px;
          margin: 5px auto -9px;
-         border: 1px solid $light-text;
+         border: 1px solid $light;
          border-radius: 50%;
 
          @media (min-width: 294px) {
@@ -302,7 +260,7 @@
 .card-tags.darkMode,
 .demo-link.darkMode,
 .github-link.darkMode {
-   color: $light;
+   color: $light-text;
 }
 
 .link.demo-link.darkMode,
