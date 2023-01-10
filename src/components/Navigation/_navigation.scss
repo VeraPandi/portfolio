@@ -29,15 +29,18 @@
 
 .link.home-link,
 .link.projects-link {
+   &::after {
+      content: "";
+      display: flex;
+      height: 4px;
+      width: 12px;
+      margin: 5px auto;
+      border-radius: 50%;
+   }
+
    &.active {
       &::after {
-         content: "";
-         display: flex;
-         height: 4px;
-         width: 12px;
-         margin: 5px auto;
          background-color: $light;
-         border-radius: 50%;
       }
    }
 
@@ -45,13 +48,9 @@
       &:hover,
       &:focus {
          &::after {
-            content: "";
-            display: flex;
             height: 2px;
             width: 10px;
-            margin: 5px auto;
             border: 1px solid $light;
-            border-radius: 50%;
          }
       }
    }
