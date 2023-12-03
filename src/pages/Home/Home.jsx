@@ -50,7 +50,7 @@ const Home = () => {
 
          <section className="main-center" data-cy="main-center">
             <PageTitle
-               title="Dernier projet"
+               title="Projet en cours"
                text={`page-title-text ${theme}`}
             />
 

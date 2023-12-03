@@ -24,4 +24,11 @@ export const skills = [
    "Lighthouse",
    "Styled components",
    "REST",
+   "TypeScript",
+   "Zustand",
+   "Firebase Realtime Database",
+   "Tailwind CSS",
+   "Headbreaker",
+   "Netlify",
+   "React Query",
 ];

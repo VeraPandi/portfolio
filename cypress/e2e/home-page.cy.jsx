@@ -60,7 +60,7 @@ describe("Home page", () => {
       it("A section title is visible", () => {
          cy.get("[data-cy='main-center']")
             .find("h3")
-            .should("have.text", "Dernier projet");
+            .should("have.text", "Projet en cours");
       });
 
       it("A single card is visible", () => {
