@@ -48,11 +48,12 @@
 .home-page .card-cover {
    @media (min-width: 820px) {
       position: relative;
-      top: -5%;
+      top: -5.5%;
       right: -4%;
       height: 100%;
       min-height: 111%;
       margin: 0;
+      border-radius: 9px;
    }
 }
 
