@@ -1,65 +1,50 @@
 @use "../../styles/abstracts" as *;
 
 .navigation {
-   position: relative;
-   margin-right: 0;
-   animation: fade-left 1400ms ease-in-out;
+  position: relative;
+  margin-right: 0;
+  animation: fade-left 1400ms ease-in-out;
 }
 
 // Card on homepage
 .main-top {
-   position: relative;
-   margin-left: 0;
-   animation: fade-right 1500ms both;
-   opacity: 1;
-}
-
-// Card on projects page
-$anim-duration: 1500ms;
-$anim-delay: calc($anim-duration / 5);
-
-.projects-page .card {
-   animation: slide-left 1500ms forwards;
-   opacity: 0;
-
-   @for $i from 1 through 5 {
-      &--#{(5 - $i)} {
-         animation-delay: #{$i * 0.5}s;
-      }
-   }
+  position: relative;
+  margin-left: 0;
+  animation: fade-right 1500ms both;
+  opacity: 1;
 }
 
 /* ------- Slide left ------- */
 @keyframes slide-left {
-   from {
-      transform: translateX(70%);
-      opacity: 0;
-   }
+  from {
+    transform: translateX(70%);
+    opacity: 0;
+  }
 
-   to {
-      transform: translateX(0%);
-      opacity: 1;
-   }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 /* ------- Fade left ------- */
 @keyframes fade-left {
-   from {
-      margin-right: -300px;
-   }
+  from {
+    margin-right: -300px;
+  }
 
-   to {
-      margin-right: 0;
-   }
+  to {
+    margin-right: 0;
+  }
 }
 
 /* ------- Fade right ------- */
 @keyframes fade-right {
-   from {
-      margin-left: -600px;
-   }
+  from {
+    margin-left: -600px;
+  }
 
-   to {
-      margin-left: 0;
-   }
+  to {
+    margin-left: 0;
+  }
 }
